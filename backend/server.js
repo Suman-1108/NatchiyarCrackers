@@ -50,3 +50,5 @@ app.listen(PORT, () => {
   console.log(`📍 Sivakasi Headquarters: +91 ${config.store.phone}`);
 });
 
+export default app;
+

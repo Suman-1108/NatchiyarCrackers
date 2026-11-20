@@ -2,7 +2,8 @@ import axios from 'axios';
 import { products } from '../data/products';
 import { categories } from '../data/categories';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// In Vercel multi-service deployment, /api routes to the backend service on the same domain
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
