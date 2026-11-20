@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 
 const CartContext = createContext();
 
-const CART_STORAGE_KEY = 'pon_murugan_cart_v1';
+const CART_STORAGE_KEY = 'natchiyar_crackers_cart_v1';
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
@@ -126,7 +126,7 @@ export const CartProvider = ({ children }) => {
     const items = customItems || cartItems;
     if (items.length === 0) {
       return encodeURIComponent(
-        'Hello PON MURUGAN Fireworks! I would like to inquire about your premium fireworks collection and wholesale pricing.'
+        'Hello SRI NATCHIYAR CRACKERS (ஸ்ரீ நாச்சியார் பட்டாசு கடை)! I would like to inquire about your Sivakasi direct fireworks and wholesale pricing.'
       );
     }
 
@@ -143,7 +143,8 @@ export const CartProvider = ({ children }) => {
       .join('\n\n');
 
     let message =
-      `🎆 *PON MURUGAN PREMIUM FIREWORKS* 🎆\n` +
+      `🎆 *SRI NATCHIYAR CRACKERS – ஸ்ரீ நாச்சியார் பட்டாசு கடை* 🎆\n` +
+      `*சிவகாசி கம்பெனியின் நேரடி விற்பனை*\n` +
       `*ORDER ESTIMATE & ENQUIRY*\n` +
       `------------------------------------\n\n` +
       `${itemsText}\n\n` +
@@ -152,7 +153,7 @@ export const CartProvider = ({ children }) => {
       `💰 *Estimated Total:* ₹${currentSubtotal.toLocaleString('en-IN')}\n`;
 
     if (currentSavings > 0) {
-      message += `🎉 *Factory Savings:* ₹${currentSavings.toLocaleString('en-IN')}\n`;
+      message += `🎉 *Direct Factory Savings:* ₹${currentSavings.toLocaleString('en-IN')}\n`;
     }
 
     if (customerDetails) {

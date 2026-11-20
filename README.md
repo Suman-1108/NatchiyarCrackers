@@ -1,20 +1,20 @@
-# PON MURUGAN – Premium Fireworks Website (Full-Stack)
+# NATCHIYAR CRACKERS – Premium Fireworks Website (Full-Stack)
 
-A complete, modern, premium fireworks business website and REST API backend for **PON MURUGAN (Sivakasi)**, inspired by Lord Murugan's victorious radiance and pyrotechnic excellence.
+A complete, modern, premium fireworks business website and REST API backend for **NATCHIYAR CRACKERS (Sivakasi)**, inspired by festive radiance and pyrotechnic excellence.
 
-![Pon Murugan Fireworks](frontend/public/assets/pon_murugan_hero.jpg)
+![Natchiyar Crackers](frontend/public/assets/natchiyar_hero.jpg)
 
 ## 📁 Repository Architecture
 
 The project is structured into clean **`frontend/`** and **`backend/`** folders:
 
 ```
-Pon_murugan/
+Natchiyar_crackers/
 ├── frontend/                     # React 18 + Vite + Tailwind CSS v4 Frontend
 │   ├── public/                   # Logo, SVGs & public brand assets
 │   │   ├── assets/
-│   │   │   ├── pon_murugan_logo.jpg
-│   │   │   └── pon_murugan_hero.jpg
+│   │   │   ├── natchiyar_logo.jpg
+│   │   │   └── natchiyar_hero.jpg
 │   │   └── logo.svg
 │   ├── src/
 │   │   ├── assets/               # Brand imagery and logo assets
@@ -83,7 +83,7 @@ npm run build:frontend
 
 - **Primary Background**: `#090A0D` (Pitch Black Night Sky)
 - **Secondary Background**: `#151515` (Deep Charcoal Card Surfaces)
-- **Primary Gold**: `#F5C45A` (Radiant Divine Vel & Golden Sparks)
+- **Primary Gold**: `#F5C45A` (Radiant Golden Sparks & Accents)
 - **Deep Red**: `#8B1018` (Sacred Crimson Festive Accents)
 - **White**: `#FFFFFF` (Crisp Primary Typography)
 - **Secondary Text**: `#B8B8B8` (Legible Soft Gray)
@@ -92,8 +92,8 @@ npm run build:frontend
 
 ## 📞 Business Contact
 
-- **Brand**: PON MURUGAN FIREWORKS
+- **Brand**: NATCHIYAR CRACKERS
 - **Factory**: Sivakasi Main Road, Virudhunagar District, Tamil Nadu - 626123, India
 - **Hotline**: +91 80984 43633
 - **WhatsApp**: +91 80984 43633
-- **Email**: sales@ponmuruganfireworks.com
+- **Email**: sales@natchiyarcrackers.com

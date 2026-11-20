@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
 
         <div className="p-8 sm:p-12 rounded-3xl bg-white border border-gray-200 shadow-xl space-y-8">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#8B1018] block mb-2">Legal Compliance</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#0D5C3A] block mb-2">Legal Compliance</span>
             <h1 className="font-sans text-3xl sm:text-4xl font-black text-gray-900">
               Privacy Policy
             </h1>
@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
           <section className="space-y-3 text-sm text-gray-600 leading-relaxed">
             <h2 className="font-sans text-lg font-bold text-gray-900">1. Information We Collect</h2>
             <p>
-              PON MURUGAN Fireworks collects basic identification details such as your name, mobile contact number, shipping destination, and email address solely for processing fireworks quotations, wholesale trade inquiries, and licensed transport dispatch logistics.
+              SRI NATCHIYAR CRACKERS (ஸ்ரீ நாச்சியார் பட்டாசு கடை) collects basic identification details such as your name, mobile contact number, shipping destination, and email address solely for processing fireworks quotations, wholesale trade inquiries, and licensed transport dispatch logistics.
             </p>
           </section>
 
@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
           <section className="space-y-3 text-sm text-gray-600 leading-relaxed">
             <h2 className="font-sans text-lg font-bold text-gray-900">4. Contact Our Privacy Officer</h2>
             <p>
-              For data access, corrections, or inquiries, reach out to our Sivakasi Administrative Desk at <a href="mailto:contact@ponmuruganfireworks.com" className="text-[#8B1018] font-semibold underline">contact@ponmuruganfireworks.com</a> or phone +91 80984 43633.
+              For data access, corrections, or inquiries, reach out to our Sivakasi Administrative Desk at <a href="mailto:sales@natchiyarcrackers.com" className="text-[#0D5C3A] font-semibold underline">sales@natchiyarcrackers.com</a> or phone +91 99941 00905 / +91 94427 01264.
             </p>
           </section>
         </div>

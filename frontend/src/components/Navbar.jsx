@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { ShoppingBag, Menu, X, Search } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoImg from '../assets/logo/pon_murugan_logo.png';
+import logoImg from '../assets/logo/natchiyar_logo.png';
 
 const Navbar = ({ onOpenSearch }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -145,46 +145,44 @@ const Navbar = ({ onOpenSearch }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-200">
-      {/* 1. Top Running Announcement Ticker Bar */}
-      <div className="bg-gradient-to-r from-[#65090F] via-[#7F0E16] to-[#65090F] text-white py-1 sm:py-1.5 overflow-hidden border-b border-[#4E060B] shadow-xs select-none">
+      {/* 1. Top Running Announcement Ticker Bar (Forest Green & Yellow) */}
+      <div className="bg-gradient-to-r from-[#062D1B] via-[#0D5C3A] to-[#062D1B] text-white py-1 sm:py-1.5 overflow-hidden border-b border-[#052013] shadow-xs select-none">
         <div className="animate-ticker flex items-center whitespace-nowrap text-[11px] sm:text-xs font-bold tracking-wide">
           {/* Loop Segment 1 */}
           <div className="flex items-center gap-4 sm:gap-8 shrink-0 pr-4 sm:pr-8">
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#F59E0B] inline-block"></span>
-              <span className="text-sm sm:text-base leading-none">🎉</span>
-              <span className="text-white font-extrabold">Diwali Special Offers</span>
-              <span className="text-amber-400">•</span>
-              <span className="text-amber-200">Direct Sivakasi Factory Rates</span>
-              <span className="text-amber-400">•</span>
-              <span className="text-white">Premium Quality Crackers</span>
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-400 shadow-[0_0_8px_#FACC15] inline-block"></span>
+              <span className="text-yellow-400">•</span>
+              <span className="text-white">ஸ்ரீ நாச்சியார் பட்டாசு கடை</span>
+              <span className="text-yellow-400">•</span>
+              <span className="text-yellow-200 font-bold">சிவகாசி கம்பெனியின் நேரடி விற்பனை</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-amber-400">•</span>
+              <span className="text-yellow-400">•</span>
               <span className="text-sm sm:text-base leading-none">🚚</span>
               <span className="text-white">Direct Sivakasi Factory Wholesale</span>
-              <span className="text-amber-400">•</span>
-              <span className="text-[#FFE082] font-black uppercase tracking-wider bg-red-950/70 px-1.5 sm:px-2 py-0.5 rounded border border-amber-400/40">
-                Wholesale & Retail Orders
+              <span className="text-yellow-400">•</span>
+              <span className="text-yellow-300 font-black uppercase tracking-wider bg-black/40 px-1.5 sm:px-2 py-0.5 rounded border border-yellow-400/50">
+                Wholesale &amp; Retail Orders
               </span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-amber-400">•</span>
+              <span className="text-yellow-400">•</span>
               <span className="text-sm sm:text-base leading-none">💥</span>
-              <span className="text-white">100% Legal PESO Green Crackers & Fresh 2026 Stock</span>
+              <span className="text-white">100% Legal PESO Green Crackers &amp; Fresh 2026 Stock</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-amber-400">•</span>
+              <span className="text-yellow-400">•</span>
               <span className="text-sm sm:text-base leading-none">📞</span>
-              <span className="text-white">Helpline & WhatsApp:</span>
-              <span className="text-amber-200 font-extrabold">+91 80984 43633</span>
+              <span className="text-white">Direct Phone:</span>
+              <span className="text-yellow-300 font-black">99941 00905 / 94427 01264 / 93637 79531</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-amber-400">•</span>
+              <span className="text-yellow-400">•</span>
               <span className="text-sm sm:text-base leading-none">✨</span>
               <span className="text-white">Pan-India Fast Transport Delivery</span>
             </span>
@@ -193,40 +191,37 @@ const Navbar = ({ onOpenSearch }) => {
           {/* Loop Segment 2 (Duplicate for continuous loop) */}
           <div className="flex items-center gap-4 sm:gap-8 shrink-0 pr-4 sm:pr-8" aria-hidden="true">
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#F59E0B] inline-block"></span>
-              <span className="text-sm sm:text-base leading-none">🎉</span>
-              <span className="text-white font-extrabold">Diwali Special Offers</span>
-              <span className="text-amber-400">•</span>
-              <span className="text-amber-200">Direct Sivakasi Factory Rates</span>
-              <span className="text-amber-400">•</span>
-              <span className="text-white">Premium Quality Crackers</span>
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-400 shadow-[0_0_8px_#FACC15] inline-block"></span>
+              <span className="text-white">ஸ்ரீ நாச்சியார் பட்டாசு கடை</span>
+              <span className="text-yellow-400">•</span>
+              <span className="text-yellow-200 font-bold">சிவகாசி கம்பெனியின் நேரடி விற்பனை</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-amber-400">•</span>
+              <span className="text-yellow-400">•</span>
               <span className="text-sm sm:text-base leading-none">🚚</span>
               <span className="text-white">Direct Sivakasi Factory Wholesale</span>
-              <span className="text-amber-400">•</span>
-              <span className="text-[#FFE082] font-black uppercase tracking-wider bg-red-950/70 px-1.5 sm:px-2 py-0.5 rounded border border-amber-400/40">
-                Wholesale & Retail Orders
+              <span className="text-yellow-400">•</span>
+              <span className="text-yellow-300 font-black uppercase tracking-wider bg-black/40 px-1.5 sm:px-2 py-0.5 rounded border border-yellow-400/50">
+                Wholesale &amp; Retail Orders
               </span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-amber-400">•</span>
+              <span className="text-yellow-400">•</span>
               <span className="text-sm sm:text-base leading-none">💥</span>
-              <span className="text-white">100% Legal PESO Green Crackers & Fresh 2026 Stock</span>
+              <span className="text-white">100% Legal PESO Green Crackers &amp; Fresh 2026 Stock</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-amber-400">•</span>
+              <span className="text-yellow-400">•</span>
               <span className="text-sm sm:text-base leading-none">📞</span>
-              <span className="text-white">Helpline & WhatsApp:</span>
-              <span className="text-amber-200 font-extrabold">+91 80984 43633</span>
+              <span className="text-white">Direct Phone:</span>
+              <span className="text-yellow-300 font-black">99941 00905 / 94427 01264 / 93637 79531</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
-              <span className="text-amber-400">•</span>
+              <span className="text-yellow-400">•</span>
               <span className="text-sm sm:text-base leading-none">✨</span>
               <span className="text-white">Pan-India Fast Transport Delivery</span>
             </span>
@@ -243,25 +238,20 @@ const Navbar = ({ onOpenSearch }) => {
         }`}
       >
         <div className="w-full max-w-[1760px] mx-auto px-3 sm:px-6 lg:px-10 flex items-center justify-between gap-2 sm:gap-4">
-          {/* Brand Logo & Title on Left */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
-            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg overflow-hidden flex items-center justify-center bg-white shrink-0">
-              <img
-                src={logoImg}
-                alt="PON MURUGAN Fireworks Emblem"
-                className="w-full h-full object-contain"
-                onError={(e) => {
-                  e.target.src = '/assets/pon_murugan_logo.jpg';
-                }}
-              />
-            </div>
+          {/* Brand Logo & Title on Left (Square compact logo) */}
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group py-0.5">
+            <img
+              src="/assets/natchiyar_square_logo.png"
+              alt="SRI NATCHIYAR CRACKERS Emblem"
+              className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 aspect-square object-contain transition-transform duration-200 group-hover:scale-105 shrink-0"
+            />
 
-            <div className="flex flex-col leading-none">
-              <span className="font-serif font-black text-lg sm:text-2xl tracking-tight sm:tracking-wide text-[#7A1518] uppercase">
-                PON MURUGAN
+            <div className="flex flex-col leading-none justify-center">
+              <span className="font-serif font-black text-lg sm:text-2xl lg:text-3xl tracking-tight sm:tracking-wide text-[#0D5C3A] uppercase">
+                SRI NATCHIYAR
               </span>
-              <span className="text-[8px] sm:text-[10px] font-bold tracking-[0.2em] sm:tracking-[0.24em] text-[#C29B38] uppercase mt-0.5">
-                PREMIUM FIREWORKS
+              <span className="text-[8px] sm:text-[10px] font-extrabold tracking-[0.16em] sm:tracking-[0.2em] text-[#CA8A04] uppercase mt-0.5">
+                CRACKERS • சிவகாசி நேரடி விற்பனை
               </span>
             </div>
           </Link>
@@ -275,8 +265,8 @@ const Navbar = ({ onOpenSearch }) => {
                 className={({ isActive }) =>
                   `relative py-1 text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-[#7A1518] font-semibold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#C29B38]'
-                      : 'text-gray-700 hover:text-[#7A1518]'
+                      ? 'text-[#0D5C3A] font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#EAB308]'
+                      : 'text-gray-700 hover:text-[#0D5C3A]'
                   }`
                 }
               >
@@ -292,35 +282,44 @@ const Navbar = ({ onOpenSearch }) => {
               type="button"
               onClick={onOpenSearch}
               aria-label="Search Fireworks"
-              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-gray-50 hover:border-gray-300 text-gray-700 transition-colors"
+              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-emerald-50 hover:border-emerald-300 text-gray-700 hover:text-[#0D5C3A] transition-colors"
             >
               <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-700" strokeWidth={1.8} />
             </button>
 
-            {/* Shopping Bag Boxed Button with Red Badge */}
+            {/* Shopping Bag Boxed Button with Forest Green Badge */}
             <Link
               to="/cart"
               aria-label="Shopping Cart"
-              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-gray-50 hover:border-gray-300 text-gray-700 transition-colors relative"
+              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-emerald-50 hover:border-emerald-300 text-gray-700 hover:text-[#0D5C3A] transition-colors relative"
             >
               <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-700" strokeWidth={1.8} />
-              <span className="absolute -top-1 -right-1 sm:-top-1.5 sm:-right-1.5 bg-[#8B1E1E] text-white text-[9px] sm:text-[10px] font-bold w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shadow-xs">
+              <span className="absolute -top-1 -right-1 sm:-top-1.5 sm:-right-1.5 bg-[#0D5C3A] text-yellow-300 text-[9px] sm:text-[10px] font-bold w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shadow-xs">
                 {totalItemsCount > 0 ? totalItemsCount : '0'}
               </span>
             </Link>
 
-            {/* Warm Beige WhatsApp Button (Icon on mobile, Full label on tablet/desktop) */}
+            {/* Festive Yellow WhatsApp Button */}
             <a
-              href="https://wa.me/918098443633?text=Hi%20Pon%20Murugan%20Fireworks%2C%20I%20would%20like%20to%20order%20crackers"
+              href="https://wa.me/919994100905?text=Hi%20Sri%20Natchiyar%20Crackers%2C%20I%20would%20like%20to%20order%20crackers"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="h-8 sm:h-10 px-2 sm:px-3.5 sm:py-2 rounded-md bg-[#F6EFE5] border border-[#E8DEC7] hover:bg-[#EFE5D3] text-[#7A1518] font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-colors shadow-2xs"
+              className="h-8 sm:h-10 px-2 sm:px-3.5 sm:py-2 rounded-md bg-[#FEF9C3] border border-[#FDE047] hover:bg-[#FEF08A] text-[#073822] font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-colors shadow-2xs"
             >
-              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C29B38] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#CA8A04] shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12.031 2C6.495 2 2 6.494 2 12.029c0 1.942.553 3.754 1.513 5.293L2 22l4.832-1.472a10.02 10.02 0 0 0 5.199 1.501h.005c5.533 0 10.029-4.494 10.029-10.029A10.03 10.03 0 0 0 12.031 2zm5.879 14.288c-.246.691-1.229 1.326-1.72 1.385-.458.056-1.045.081-3.32-.861-2.678-1.107-4.417-3.83-4.551-4.009-.133-.18-1.085-1.444-1.085-2.754 0-1.31.688-1.954.933-2.221.246-.267.537-.333.716-.333.18 0 .36 0 .518.01.168.01.393-.064.615.469.229.549.78 1.905.849 2.044.068.14.114.305.023.486-.091.18-.137.293-.272.451-.137.158-.288.353-.411.474-.137.135-.28.283-.121.556.16.273.71 1.171 1.523 1.895 1.047.933 1.93 1.223 2.203 1.358.273.136.434.114.595-.069.161-.183.688-.8.871-1.074.183-.273.366-.228.614-.137.248.091 1.57.74 1.838.875.268.136.447.203.513.317.066.114.066.66-.18 1.351z"/>
               </svg>
               <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+
+            {/* Direct Phone Call Button (Header Quick Access) */}
+            <a
+              href="tel:9994100905"
+              aria-label="Call Sri Natchiyar Crackers"
+              className="h-8 sm:h-10 px-2 sm:px-3 rounded-md bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300 font-bold text-xs sm:text-sm hidden md:flex items-center gap-1.5 transition-colors shadow-2xs"
+            >
+              <span>📞 99941 00905</span>
             </a>
 
             {/* Mobile Hamburger Toggle */}
@@ -337,18 +336,18 @@ const Navbar = ({ onOpenSearch }) => {
       </div>
 
       {/* 3. Bottom Category Line-Draw Icons Strip */}
-      <div className="bg-[#FAF8F5] border-b border-[#EBE4D8] shadow-2xs py-1 sm:py-1.5 px-2 sm:px-6 select-none overflow-x-auto no-scrollbar scroll-smooth">
+      <div className="bg-[#F8FAF8] border-b border-[#E2EBE2] shadow-2xs py-1 sm:py-1.5 px-2 sm:px-6 select-none overflow-x-auto no-scrollbar scroll-smooth">
         <div className="w-full max-w-[1760px] mx-auto flex items-center justify-start lg:justify-center gap-2 sm:gap-4 md:gap-6">
           {categoryLineItems.map((cat) => (
             <Link
               key={cat.slug}
               to={`/products?category=${cat.slug}`}
-              className="group flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full border border-transparent hover:border-[#E5DAC6] hover:bg-white text-gray-700 hover:text-[#7A1518] transition-all shrink-0"
+              className="group flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full border border-transparent hover:border-yellow-400 hover:bg-white text-gray-700 hover:text-[#0D5C3A] transition-all shrink-0"
             >
-              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full flex items-center justify-center bg-white border border-[#E5DAC6] group-hover:border-[#7A1518] group-hover:bg-[#F6EFE5] group-hover:scale-105 text-[#7A1518] transition-all shadow-2xs shrink-0">
+              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full flex items-center justify-center bg-white border border-emerald-200 group-hover:border-[#0D5C3A] group-hover:bg-[#DCFCE7] group-hover:scale-105 text-[#0D5C3A] transition-all shadow-2xs shrink-0">
                 {cat.icon}
               </div>
-              <span className="text-[11px] sm:text-xs font-bold tracking-tight whitespace-nowrap text-gray-700 group-hover:text-[#7A1518] transition-colors">
+              <span className="text-[11px] sm:text-xs font-bold tracking-tight whitespace-nowrap text-gray-700 group-hover:text-[#0D5C3A] transition-colors">
                 {cat.name}
               </span>
             </Link>
@@ -366,6 +365,9 @@ const Navbar = ({ onOpenSearch }) => {
             className="lg:hidden bg-white border-b border-gray-200 px-4 py-4 shadow-lg"
           >
             <div className="flex flex-col space-y-2">
+              <div className="pb-2 mb-1 border-b border-gray-100 flex flex-col">
+                <span className="text-xs font-bold text-[#CA8A04]">சிவகாசி கம்பெனியின் நேரடி விற்பனை</span>
+              </div>
               {navLinks.map((link) => (
                 <NavLink
                   key={link.name}
@@ -374,8 +376,8 @@ const Navbar = ({ onOpenSearch }) => {
                   className={({ isActive }) =>
                     `px-3 py-2.5 rounded-md text-sm font-semibold transition-colors ${
                       isActive
-                        ? 'text-[#7A1518] bg-[#F6EFE5]'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-[#7A1518]'
+                        ? 'text-[#0D5C3A] bg-emerald-50 font-bold'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-[#0D5C3A]'
                     }`
                   }
                 >
@@ -385,15 +387,21 @@ const Navbar = ({ onOpenSearch }) => {
 
               <div className="pt-3 border-t border-gray-100 flex flex-col gap-2">
                 <a
-                  href="https://wa.me/918098443633?text=Hi%20Pon%20Murugan%20Fireworks%2C%20I%20would%20like%20to%20order%20crackers"
+                  href="tel:9994100905"
+                  className="py-2.5 px-4 rounded-md bg-[#0D5C3A] text-yellow-300 font-bold text-center flex items-center justify-center gap-2"
+                >
+                  <span>📞 Call: 99941 00905 / 94427 01264</span>
+                </a>
+                <a
+                  href="https://wa.me/919994100905?text=Hi%20Sri%20Natchiyar%20Crackers%2C%20I%20would%20like%20to%20order%20crackers"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-2.5 px-4 rounded-md bg-[#F6EFE5] border border-[#E8DEC7] text-[#7A1518] font-bold text-center flex items-center justify-center gap-2"
+                  className="py-2.5 px-4 rounded-md bg-[#FEF9C3] border border-[#FDE047] text-[#073822] font-bold text-center flex items-center justify-center gap-2"
                 >
-                  <svg className="w-4 h-4 text-[#C29B38]" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-4 h-4 text-[#CA8A04]" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12.031 2C6.495 2 2 6.494 2 12.029c0 1.942.553 3.754 1.513 5.293L2 22l4.832-1.472a10.02 10.02 0 0 0 5.199 1.501h.005c5.533 0 10.029-4.494 10.029-10.029A10.03 10.03 0 0 0 12.031 2zm5.879 14.288c-.246.691-1.229 1.326-1.72 1.385-.458.056-1.045.081-3.32-.861-2.678-1.107-4.417-3.83-4.551-4.009-.133-.18-1.085-1.444-1.085-2.754 0-1.31.688-1.954.933-2.221.246-.267.537-.333.716-.333.18 0 .36 0 .518.01.168.01.393-.064.615.469.229.549.78 1.905.849 2.044.068.14.114.305.023.486-.091.18-.137.293-.272.451-.137.158-.288.353-.411.474-.137.135-.28.283-.121.556.16.273.71 1.171 1.523 1.895 1.047.933 1.93 1.223 2.203 1.358.273.136.434.114.595-.069.161-.183.688-.8.871-1.074.183-.273.366-.228.614-.137.248.091 1.57.74 1.838.875.268.136.447.203.513.317.066.114.066.66-.18 1.351z"/>
                   </svg>
-                  <span>Chat on WhatsApp: +91 80984 43633</span>
+                  <span>Chat on WhatsApp: +91 99941 00905</span>
                 </a>
               </div>
             </div>

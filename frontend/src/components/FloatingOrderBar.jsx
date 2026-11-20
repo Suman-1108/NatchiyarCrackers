@@ -26,14 +26,14 @@ const FloatingOrderBar = () => {
         totalItemsCount > 0 ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
       }`}
     >
-      <div className="bg-white/95 backdrop-blur-md border-t-2 border-[#7A1518] shadow-[0_-8px_30px_rgba(0,0,0,0.18)]">
+      <div className="bg-white/95 backdrop-blur-md border-t-2 border-[#0D5C3A] shadow-[0_-8px_30px_rgba(0,0,0,0.18)]">
         <div className="max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 py-3 sm:py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3">
           {/* Left: Cart items count & Total Amount Calculation */}
           <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
             <div className="flex items-center gap-3">
-              <div className="relative p-2.5 bg-[#FAF6F0] border border-[#EAE3D6] rounded-xl text-[#7A1518] shrink-0">
+              <div className="relative p-2.5 bg-emerald-50 border border-emerald-200 rounded-xl text-[#0D5C3A] shrink-0">
                 <ShoppingBag className="w-5 h-5" />
-                <span className="absolute -top-1.5 -right-1.5 bg-[#7A1518] text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
+                <span className="absolute -top-1.5 -right-1.5 bg-[#0D5C3A] text-yellow-300 text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
                   {totalItemsCount}
                 </span>
               </div>
@@ -43,7 +43,7 @@ const FloatingOrderBar = () => {
                   <span className="text-[11px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider">
                     Total ({cartItems.length} {cartItems.length === 1 ? 'variety' : 'varieties'}):
                   </span>
-                  <span className="text-xl sm:text-2xl font-black text-[#7A1518] font-sans">
+                  <span className="text-xl sm:text-2xl font-black text-[#0D5C3A] font-sans">
                     ₹{subtotal.toLocaleString('en-IN')}
                   </span>
                   {totalSavings > 0 && (
@@ -88,19 +88,19 @@ const FloatingOrderBar = () => {
             </button>
 
             <a
-              href={`https://wa.me/918098443633?text=${getWhatsAppOrderMessage()}`}
+              href={`https://wa.me/919994100905?text=${getWhatsAppOrderMessage()}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-bold text-xs transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-emerald-600 bg-emerald-50 text-[#0D5C3A] hover:bg-emerald-100 font-bold text-xs transition-colors whitespace-nowrap"
             >
               <span>WhatsApp Estimate</span>
             </a>
 
             <Link
               to="/cart"
-              className="flex-1 sm:flex-initial bg-[#7A1518] hover:bg-[#8F1A1E] text-white px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 whitespace-nowrap"
+              className="flex-1 sm:flex-initial bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300 px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 whitespace-nowrap"
             >
-              <span>View Cart & Order</span>
+              <span>View Cart &amp; Order</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

@@ -1,7 +1,7 @@
 {
-  "name": "pon-murugan-backend",
+  "name": "natchiyar-crackers-backend",
   "version": "1.0.0",
-  "description": "Node.js & Express REST API for PON MURUGAN Fireworks",
+  "description": "Node.js & Express REST API for NATCHIYAR CRACKERS",
   "main": "server.js",
   "type": "module",
   "scripts": {

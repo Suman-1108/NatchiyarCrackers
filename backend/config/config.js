@@ -6,11 +6,15 @@ export const config = {
   nodeEnv: process.env.NODE_ENV || 'development',
   frontendUrl: process.env.FRONTEND_URL || 'http://localhost:5173',
   store: {
-    name: 'PON MURUGAN FIREWORKS',
+    name: 'SRI NATCHIYAR CRACKERS',
+    tamilName: 'ஸ்ரீ நாச்சியார் பட்டாசு கடை',
+    tagline: 'சிவகாசி கம்பெனியின் நேரடி விற்பனை',
     city: process.env.STORE_CITY || 'Sivakasi',
     state: process.env.STORE_STATE || 'Tamil Nadu',
-    phone: process.env.STORE_PHONE || '8098443633',
-    email: process.env.STORE_EMAIL || 'sales@ponmuruganfireworks.com',
+    phone: process.env.STORE_PHONE || '9994100905',
+    secondaryPhone: '9442701264',
+    tertiaryPhone: '9363779531',
+    whatsapp: '919994100905',
+    email: process.env.STORE_EMAIL || 'sales@natchiyarcrackers.com',
   }
 };
-

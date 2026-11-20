@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ONLINE',
-    service: 'PON MURUGAN Fireworks API Server',
+    service: 'NATCHIYAR CRACKERS API Server',
     location: config.store.city,
     time: new Date().toISOString()
   });
@@ -46,7 +46,7 @@ app.use(errorHandler);
 const PORT = config.port;
 
 app.listen(PORT, () => {
-  console.log(`🎆 PON MURUGAN Fireworks API running on port ${PORT} [${config.nodeEnv}]`);
+  console.log(`🎆 NATCHIYAR CRACKERS API running on port ${PORT} [${config.nodeEnv}]`);
   console.log(`📍 Sivakasi Headquarters: +91 ${config.store.phone}`);
 });
 

@@ -13,7 +13,7 @@ const TermsConditions = () => {
 
         <div className="p-8 sm:p-12 rounded-3xl bg-white border border-gray-200 shadow-xl space-y-8">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#8B1018] block mb-2">Terms of Service</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#0D5C3A] block mb-2">Terms of Service</span>
             <h1 className="font-sans text-3xl sm:text-4xl font-black text-gray-900">
               Terms &amp; Conditions
             </h1>
@@ -23,7 +23,7 @@ const TermsConditions = () => {
           <section className="space-y-3 text-sm text-gray-600 leading-relaxed">
             <h2 className="font-sans text-lg font-bold text-gray-900">1. Legal Fireworks &amp; Regulatory Compliance</h2>
             <p>
-              All products listed by PON MURUGAN are manufactured in Sivakasi in accordance with the Petroleum and Explosives Safety Organization (PESO) regulations and Supreme Court mandates regarding Green Crackers. Sales, delivery, and possession are strictly subject to applicable local, state, and central laws.
+              All products listed by SRI NATCHIYAR CRACKERS (ஸ்ரீ நாச்சியார் பட்டாசு கடை) are manufactured in Sivakasi in accordance with the Petroleum and Explosives Safety Organization (PESO) regulations and Supreme Court mandates regarding Green Crackers. Sales, delivery, and possession are strictly subject to applicable local, state, and central laws.
             </p>
           </section>
 
@@ -37,7 +37,7 @@ const TermsConditions = () => {
           <section className="space-y-3 text-sm text-gray-600 leading-relaxed">
             <h2 className="font-sans text-lg font-bold text-gray-900">3. Safety &amp; Usage Responsibility</h2>
             <p>
-              Fireworks should only be handled and discharged by adults in designated open areas, observing safe distances from structures and flammable materials. PON MURUGAN accepts no liability for misuse, unauthorized alterations, or failure to observe basic safety protocols.
+              Fireworks should only be handled and discharged by adults in designated open areas, observing safe distances from structures and flammable materials. NATCHIYAR CRACKERS accepts no liability for misuse, unauthorized alterations, or failure to observe basic safety protocols.
             </p>
           </section>
 

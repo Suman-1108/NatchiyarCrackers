@@ -1,4 +1,4 @@
-// Official PON MURUGAN Sivakasi Price List 2026 (Flat 80% Discount)
+﻿// Official NATCHIYAR CRACKERS Sivakasi Price List 2026 (Flat 80% Discount)
 // 99 Verified Fireworks Varieties directly from Sivakasi Factory
 
 export const products = [
@@ -20,7 +20,7 @@ export const products = [
     "tag": "80% Flat Off",
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #1 - 7 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #1 - 7 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -45,7 +45,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #2 - 7 CM Colour. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #2 - 7 CM Colour. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -70,7 +70,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #3 - 7 CM Green. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #3 - 7 CM Green. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -95,7 +95,7 @@ export const products = [
     "tag": "Best Seller",
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #4 - 10 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #4 - 10 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -120,7 +120,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #5 - 10 CM Colour. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #5 - 10 CM Colour. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -145,7 +145,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #6 - 10 CM Red. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #6 - 10 CM Red. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -170,7 +170,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #7 - 10 CM Green. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #7 - 10 CM Green. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -195,7 +195,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #8 - 12 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #8 - 12 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -220,7 +220,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #9 - 12 CM Colour. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #9 - 12 CM Colour. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -245,7 +245,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #10 - 12 CM 50-50. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #10 - 12 CM 50-50. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -270,7 +270,7 @@ export const products = [
     "tag": "Popular",
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #11 - 15 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #11 - 15 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -295,7 +295,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #12 - 15 CM Green. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #12 - 15 CM Green. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -320,7 +320,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #13 - 15 CM Multi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #13 - 15 CM Multi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -345,7 +345,7 @@ export const products = [
     "tag": "Family Pack",
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #14 - 30 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #14 - 30 CM Electric. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -370,7 +370,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #15 - 30 CM Colour. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #15 - 30 CM Colour. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -395,7 +395,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #16 - 30 CM Green. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #16 - 30 CM Green. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -420,7 +420,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #17 - 30 CM Red. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #17 - 30 CM Red. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -445,7 +445,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #18 - 30 CM Multi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #18 - 30 CM Multi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -470,7 +470,7 @@ export const products = [
     "tag": "Mega Sparkler",
     "soundLevel": "Visual & Musical Display",
     "duration": "~45 seconds",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #19 - 55 CM Colour Sparkles. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #19 - 55 CM Colour Sparkles. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -495,7 +495,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #20 - 2B Chorsa. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #20 - 2B Chorsa. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -520,7 +520,7 @@ export const products = [
     "tag": "Top Sound",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #21 - 5G Chorsa. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #21 - 5G Chorsa. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -545,7 +545,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #22 - 2½ / ¾ Kurvi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #22 - 2½ / ¾ Kurvi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -570,7 +570,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #23 - 1 Inch Lakshmi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #23 - 1 Inch Lakshmi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -595,7 +595,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #24 - 1 Inch Lakshmi (Deluxe). 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #24 - 1 Inch Lakshmi (Deluxe). 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -620,7 +620,7 @@ export const products = [
     "tag": "Traditional Favorite",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #25 - 4 Inch Deluxe Lakshmi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #25 - 4 Inch Deluxe Lakshmi. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -645,7 +645,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #26 - 1½ Inch Twinkling. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #26 - 1½ Inch Twinkling. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -670,7 +670,7 @@ export const products = [
     "tag": "Glitter Star",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #27 - 4 Inch Twinkling. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #27 - 4 Inch Twinkling. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -695,7 +695,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #28 - 7 Inch Pencil. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #28 - 7 Inch Pencil. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -720,7 +720,7 @@ export const products = [
     "tag": "Long Shower",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #29 - 12 Inch Pencil. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #29 - 12 Inch Pencil. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -745,7 +745,7 @@ export const products = [
     "tag": "Best Seller",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #30 - Bijli 100P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #30 - Bijli 100P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -770,7 +770,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #31 - Bijli 50P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #31 - Bijli 50P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -795,7 +795,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #32 - Kit 12P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #32 - Kit 12P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -820,7 +820,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #33 - Rada Kit Kat. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #33 - Rada Kit Kat. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -845,7 +845,7 @@ export const products = [
     "tag": "Loud Crack",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #34 - King Bullet. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #34 - King Bullet. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -870,7 +870,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #35 - Kargile. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #35 - Kargile. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -895,7 +895,7 @@ export const products = [
     "tag": "Mega Burst",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #36 - Titanic. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #36 - Titanic. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -920,7 +920,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #37 - Jurassic. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #37 - Jurassic. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -945,7 +945,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #38 - 1 Inch DII. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #38 - 1 Inch DII. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -970,7 +970,7 @@ export const products = [
     "tag": "Whistling Bomb",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #39 - Rocket Bomb. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #39 - Rocket Bomb. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -995,7 +995,7 @@ export const products = [
     "tag": "Double Sound",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #40 - 2 Sound Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #40 - 2 Sound Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1020,7 +1020,7 @@ export const products = [
     "tag": "Triple Sound",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #41 - 3 Sound Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #41 - 3 Sound Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1045,7 +1045,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #42 - Navarang Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #42 - Navarang Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1070,7 +1070,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #43 - Unic Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #43 - Unic Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1095,7 +1095,7 @@ export const products = [
     "tag": "Sky Display",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #44 - Multi Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #44 - Multi Rocket. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1120,7 +1120,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #45 - Flower Pot Small. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #45 - Flower Pot Small. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1145,7 +1145,7 @@ export const products = [
     "tag": "Golden Shower",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #46 - Flower Pot Big. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #46 - Flower Pot Big. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1170,7 +1170,7 @@ export const products = [
     "tag": "Special Spark",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #47 - Flower Pot Special. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #47 - Flower Pot Special. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1195,7 +1195,7 @@ export const products = [
     "tag": "Giant Fountain",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #48 - Flower Pot Ashok. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #48 - Flower Pot Ashok. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1220,7 +1220,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #62 - 2½ Inch Single. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #62 - 2½ Inch Single. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1245,7 +1245,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #63 - 2½ Inch 2P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #63 - 2½ Inch 2P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1270,7 +1270,7 @@ export const products = [
     "tag": "Thunder Power",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #64 - 3½ Inch Single. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #64 - 3½ Inch Single. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1295,7 +1295,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #65 - Twin Tamil. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #65 - Twin Tamil. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1320,7 +1320,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #66 - 24 DLX. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #66 - 24 DLX. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1345,7 +1345,7 @@ export const products = [
     "tag": null,
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #67 - 30 DLX. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #67 - 30 DLX. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1370,7 +1370,7 @@ export const products = [
     "tag": "Festive Garland",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #68 - 100 DLX. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #68 - 100 DLX. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1395,7 +1395,7 @@ export const products = [
     "tag": "Celebration Ladi",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #69 - 1000 Wala. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #69 - 1000 Wala. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1420,7 +1420,7 @@ export const products = [
     "tag": "Grand Festival",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #70 - 2000 Wala. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #70 - 2000 Wala. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1445,7 +1445,7 @@ export const products = [
     "tag": "Royal Ceremony",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #71 - 5000 Wala. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #71 - 5000 Wala. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1470,7 +1470,7 @@ export const products = [
     "tag": "Temple & Wedding",
     "soundLevel": "High Sound (PESO Compliant)",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #72 - 10000 Wala. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #72 - 10000 Wala. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1495,7 +1495,7 @@ export const products = [
     "tag": "Night Sky Cake",
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #73 - 12 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #73 - 12 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1520,7 +1520,7 @@ export const products = [
     "tag": "Multi-Color",
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #74 - 25 Rangela. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #74 - 25 Rangela. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1545,7 +1545,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #75 - 25 M/C. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #75 - 25 M/C. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1570,7 +1570,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #76 - 25 Tegard. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #76 - 25 Tegard. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1595,7 +1595,7 @@ export const products = [
     "tag": "Sky Stars",
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #77 - 30 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #77 - 30 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1620,7 +1620,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #78 - 50 Shot M/P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #78 - 50 Shot M/P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1645,7 +1645,7 @@ export const products = [
     "tag": "Dazzling Show",
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #79 - 60 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #79 - 60 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1670,7 +1670,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #80 - 60 Shot Special. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #80 - 60 Shot Special. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1695,7 +1695,7 @@ export const products = [
     "tag": "Mega Fireworks",
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #81 - 120 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #81 - 120 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1720,7 +1720,7 @@ export const products = [
     "tag": "Grand Celestial",
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #82 - 240 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #82 - 240 Shot. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1745,7 +1745,7 @@ export const products = [
     "tag": "Giant Burst",
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #83 - 2 Inch Set Out. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #83 - 2 Inch Set Out. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1770,7 +1770,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #84 - 1 Inch Single Set Out. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #84 - 1 Inch Single Set Out. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1795,7 +1795,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Sky Multi-Burst",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #85 - 1 Inch Out. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #85 - 1 Inch Out. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1820,7 +1820,7 @@ export const products = [
     "tag": "Kids Favorite",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #91 - Dil Dil. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #91 - Dil Dil. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1845,7 +1845,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #92 - Apple. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #92 - Apple. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1870,7 +1870,7 @@ export const products = [
     "tag": "Super Flash",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #93 - Photo Flash. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #93 - Photo Flash. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1895,7 +1895,7 @@ export const products = [
     "tag": "Flying Spinner",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #94 - Drone. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #94 - Drone. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1920,7 +1920,7 @@ export const products = [
     "tag": "Ascending Flight",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #95 - Helicopter. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #95 - Helicopter. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1945,7 +1945,7 @@ export const products = [
     "tag": "Color Feather",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #96 - Peacock. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #96 - Peacock. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1970,7 +1970,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #97 - Butterfly. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #97 - Butterfly. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -1995,7 +1995,7 @@ export const products = [
     "tag": "Giant Feather",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #98 - Bada Peacock. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #98 - Bada Peacock. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2020,7 +2020,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #99 - Mini Siren. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #99 - Mini Siren. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2045,7 +2045,7 @@ export const products = [
     "tag": "Whistling Scream",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #100 - Siren. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #100 - Siren. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2070,7 +2070,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #101 - Lila Majnu. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #101 - Lila Majnu. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2095,7 +2095,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #102 - Servant Big. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #102 - Servant Big. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2120,7 +2120,7 @@ export const products = [
     "tag": "Novelty Special",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #103 - Classic. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #103 - Classic. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2145,7 +2145,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #104 - Pogo Matches. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #104 - Pogo Matches. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2170,7 +2170,7 @@ export const products = [
     "tag": "Trending 2026",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #105 - Black Money 2P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #105 - Black Money 2P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2195,7 +2195,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #106 - Money Bank 3P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #106 - Money Bank 3P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2220,7 +2220,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #107 - Cylinder 3P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #107 - Cylinder 3P. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2245,7 +2245,7 @@ export const products = [
     "tag": "Musical Whistle",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #108 - Fire Egg Siren. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #108 - Fire Egg Siren. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2270,7 +2270,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #109 - Stone Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #109 - Stone Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2295,7 +2295,7 @@ export const products = [
     "tag": "Day Celebration",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #110 - 3 Colour Smoke. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #110 - 3 Colour Smoke. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2320,7 +2320,7 @@ export const products = [
     "tag": "Fun Gun Toy",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #111 - Sony Ring Cap + Gun. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #111 - Sony Ring Cap + Gun. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2345,7 +2345,7 @@ export const products = [
     "tag": null,
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #112 - Anaconda. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #112 - Anaconda. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2370,7 +2370,7 @@ export const products = [
     "tag": "Economy Hamper",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #113 - 20 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #113 - 20 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2395,7 +2395,7 @@ export const products = [
     "tag": "Standard Family",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #114 - 30 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #114 - 30 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2420,7 +2420,7 @@ export const products = [
     "tag": "Deluxe Celebration",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #115 - 40 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #115 - 40 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2445,7 +2445,7 @@ export const products = [
     "tag": "Premium Royal",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #116 - 50 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #116 - 50 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",
@@ -2470,7 +2470,7 @@ export const products = [
     "tag": "Maharaja Supreme",
     "soundLevel": "Visual & Musical Display",
     "duration": "Instant Joy",
-    "description": "Official Pon Murugan Sivakasi 2026 Price List Item #117 - 65 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
+    "description": "Official Natchiyar Crackers Sivakasi 2026 Price List Item #117 - 65 Item Gift Box. 100% genuine factory direct crackers adhering to licensed PESO and Green Cracker safety standards.",
     "features": [
       "100% Sivakasi Direct Factory Wholesale Rate (80% Flat Off)",
       "Moisture-proof packing with quick ignition safety fuse",

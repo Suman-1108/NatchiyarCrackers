@@ -1,8 +1,8 @@
 {
-  "name": "pon-murugan-root",
+  "name": "natchiyar-crackers-root",
   "version": "1.0.0",
   "private": true,
-  "description": "PON MURUGAN – Premium Fireworks Monorepo (Frontend & Backend)",
+  "description": "NATCHIYAR CRACKERS – Premium Fireworks Monorepo (Frontend & Backend)",
   "scripts": {
     "dev:frontend": "npm --prefix frontend run dev",
     "dev:backend": "npm --prefix backend run dev",

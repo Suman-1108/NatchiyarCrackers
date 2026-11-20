@@ -40,7 +40,7 @@ function App() {
       {/* Branded Splash Screen with Zoom-In Logo Animation */}
       {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
 
-      <div className="flex flex-col min-h-screen bg-[#F8F9FA] text-[#18181B] selection:bg-[#D81C28] selection:text-white">
+      <div className="flex flex-col min-h-screen bg-[#FAF8F5] text-[#18181B] selection:bg-yellow-400 selection:text-[#073822]">
         <ScrollToTop />
         <Toaster
           position="bottom-center"

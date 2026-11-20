@@ -70,7 +70,7 @@ export const apiService = {
         success: true,
         offlineMode: true,
         message: 'Wholesale enquiry submitted successfully! A dedicated B2B manager will call you within 2 hours.',
-        quoteRef: `PM-B2B-${Date.now().toString().slice(-6)}`
+        quoteRef: `SNC-B2B-${Date.now().toString().slice(-6)}`
       };
     }
   },

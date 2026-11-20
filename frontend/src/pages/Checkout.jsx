@@ -82,11 +82,10 @@ const Checkout = () => {
 
     try {
       const res = await apiService.submitOrderIntent(orderPayload);
-      // Per instructions: "Keep payment integration configurable. Do not simulate successful payments or claim orders have been placed without a real backend confirmation."
       setOrderSubmittedData({
-        orderRef: `PM-ORD-${Date.now().toString().slice(-6)}`,
+        orderRef: `SNC-ORD-${Date.now().toString().slice(-6)}`,
         requiresBackend: res.requiresBackend,
-        instructions: res.instructions || 'Order details saved. Please confirm transport booking with our Sivakasi sales desk.',
+        instructions: res.instructions || 'Order details saved. Please confirm transport booking with Sri Natchiyar Crackers sales desk.',
         customer: { ...formData },
         items: [...cartItems],
         subtotal,
@@ -112,7 +111,7 @@ const Checkout = () => {
     const del = orderSubmittedData?.deliveryFee || deliveryFee;
     const tot = orderSubmittedData?.total || finalTotal;
     const cust = orderSubmittedData?.customer || formData;
-    const ref = orderSubmittedData?.orderRef || 'PM-ORD-NEW';
+    const ref = orderSubmittedData?.orderRef || 'SNC-ORD-NEW';
 
     const itemList = items
       .map(
@@ -122,7 +121,8 @@ const Checkout = () => {
       .join('\n\n');
 
     return encodeURIComponent(
-      `🎆 *PON MURUGAN PREMIUM FIREWORKS* 🎆\n` +
+      `🎆 *SRI NATCHIYAR CRACKERS – ஸ்ரீ நாச்சியார் பட்டாசு கடை* 🎆\n` +
+      `*சிவகாசி கம்பெனியின் நேரடி விற்பனை*\n` +
       `*ORDER BOOKING CONFIRMATION*\n` +
       `------------------------------------\n` +
       `🔖 *Booking Ref:* ${ref}\n\n` +
@@ -143,53 +143,53 @@ const Checkout = () => {
   };
 
   return (
-    <div className="bg-[#F8F9FA] min-h-screen text-gray-900 pt-40 sm:pt-48 pb-20">
+    <div className="bg-[#FAF8F5] min-h-screen text-gray-900 pt-40 sm:pt-48 pb-20">
       <div className="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16">
         {/* Order Submission Status / Confirmation Box */}
         {orderSubmittedData ? (
           <div className="max-w-2xl mx-auto py-2 sm:py-6 animate-in fade-in zoom-in-95 duration-300">
-            <div className="bg-white border border-[#EAE3D6] rounded-3xl p-6 sm:p-10 text-center shadow-xl relative overflow-hidden">
+            <div className="bg-white border border-emerald-100 rounded-3xl p-6 sm:p-10 text-center shadow-xl relative overflow-hidden">
               {/* Top Accent Ribbon */}
-              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#7A1518] via-[#C29B38] to-[#7A1518]"></div>
+              <div className="absolute top-0 left-0 right-0 h-2.5 bg-gradient-to-r from-[#062D1B] via-yellow-400 to-[#0D5C3A]"></div>
 
               {/* Verified Icon */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-emerald-50 text-emerald-600 mx-auto flex items-center justify-center mb-5 border-2 border-emerald-200 shadow-sm">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-emerald-50 text-emerald-700 mx-auto flex items-center justify-center mb-5 border-2 border-emerald-200 shadow-sm">
                 <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
 
               {/* Status Badge */}
-              <span className="text-xs font-bold uppercase tracking-widest text-[#7A1518] px-3.5 py-1 rounded-full bg-[#FAF6F0] border border-[#E5DAC6] inline-block mb-3">
-                Order Intent Registered
+              <span className="text-xs font-bold uppercase tracking-widest text-[#0D5C3A] px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 inline-block mb-3">
+               Order Intent Registered
               </span>
 
               {/* Booking Reference */}
               <h2 className="font-serif text-2xl sm:text-3xl font-black text-gray-900 mb-2">
-                Booking Ref: <span className="text-[#7A1518] font-mono">{orderSubmittedData.orderRef}</span>
+                Booking Ref: <span className="text-[#0D5C3A] font-mono">{orderSubmittedData.orderRef}</span>
               </h2>
 
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6 max-w-lg mx-auto">
-                In accordance with legal explosives delivery regulations, orders are dispatched via licensed Sivakasi parcel transport hubs. Your order intent has been logged.
+                In accordance with fireworks transport protocols, orders are dispatched via licensed Sivakasi parcel transport hubs. Your order intent has been logged.
               </p>
 
               {/* Customer & Order Summary Snapshot */}
-              <div className="bg-[#FAF8F5] border border-[#EBE4D8] rounded-2xl p-4 sm:p-5 mb-6 text-left text-xs text-gray-700 space-y-2.5">
-                <div className="flex items-center justify-between pb-2 border-b border-[#EAE3D6]">
+              <div className="bg-[#FAFDFB] border border-emerald-100 rounded-2xl p-4 sm:p-5 mb-6 text-left text-xs text-gray-700 space-y-2.5">
+                <div className="flex items-center justify-between pb-2 border-b border-emerald-50">
                   <span className="text-gray-500 font-bold uppercase tracking-wider text-[10px]">Customer Name:</span>
                   <span className="font-bold text-gray-900">{orderSubmittedData.customer?.fullName || formData.fullName}</span>
                 </div>
-                <div className="flex items-center justify-between pb-2 border-b border-[#EAE3D6]">
+                <div className="flex items-center justify-between pb-2 border-b border-emerald-50">
                   <span className="text-gray-500 font-bold uppercase tracking-wider text-[10px]">Mobile Contact:</span>
                   <span className="font-bold text-gray-900">{orderSubmittedData.customer?.mobileNumber || formData.mobileNumber}</span>
                 </div>
-                <div className="flex items-center justify-between pb-2 border-b border-[#EAE3D6]">
+                <div className="flex items-center justify-between pb-2 border-b border-emerald-50">
                   <span className="text-gray-500 font-bold uppercase tracking-wider text-[10px]">Delivery Destination:</span>
                   <span className="font-bold text-gray-900">
                     {orderSubmittedData.customer?.district || formData.district}, {orderSubmittedData.customer?.state || formData.state} - {orderSubmittedData.customer?.pincode || formData.pincode}
                   </span>
                 </div>
                 <div className="flex items-center justify-between pt-1 font-bold">
-                  <span className="text-[#7A1518] uppercase tracking-wider text-xs">Total Order Value:</span>
-                  <span className="text-[#7A1518] text-base sm:text-lg font-black">₹{(orderSubmittedData.total || finalTotal).toLocaleString('en-IN')}</span>
+                  <span className="text-[#0D5C3A] uppercase tracking-wider text-xs">Total Order Value:</span>
+                  <span className="text-[#0D5C3A] text-base sm:text-lg font-black">₹{(orderSubmittedData.total || finalTotal).toLocaleString('en-IN')}</span>
                 </div>
               </div>
 
@@ -200,20 +200,20 @@ const Checkout = () => {
                   <span>Sivakasi Transport Dispatch Notice:</span>
                 </p>
                 <p className="text-[11px] sm:text-xs text-amber-800 leading-relaxed">
-                  In accordance with fireworks transport protocols, our Sivakasi sales desk will verify your order items and dispatch slot. Please click below to confirm your booking via WhatsApp for instantaneous bill generation.
+                  Our Sivakasi sales desk (99941 00905 / 94427 01264) will verify your order items and dispatch slot. Please click below to confirm your booking via WhatsApp for instantaneous bill generation.
                 </p>
               </div>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href={`https://wa.me/918098443633?text=${generateWhatsAppOrderText()}`}
+                  href={`https://wa.me/919994100905?text=${generateWhatsAppOrderText()}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold text-sm text-white flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition-all active:scale-95"
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 font-bold text-sm text-white flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition-all active:scale-95"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Confirm Order via WhatsApp</span>
+                  <span>Confirm Order via WhatsApp: 99941 00905</span>
                 </a>
 
                 <Link
@@ -227,17 +227,20 @@ const Checkout = () => {
           </div>
         ) : (
           <>
-            {/* Form Header (Only shown during active form completion) */}
+            {/* Form Header */}
             <div className="mb-8">
-              <Link to="/cart" className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#7A1518] mb-3">
+              <Link to="/cart" className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#0D5C3A] mb-3">
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>Back to Shopping Cart</span>
               </Link>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#CA8A04] block mb-1">
+                ஸ்ரீ நாச்சியார் பட்டாசு கடை • சிவகாசி
+              </span>
               <h1 className="font-serif text-3xl sm:text-4xl font-black text-gray-900">
-                Checkout &amp; <span className="text-[#7A1518]">Transport Booking</span>
+                Checkout &amp; <span className="text-[#0D5C3A]">Transport Booking</span>
               </h1>
               <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                Complete your delivery details for licensed Sivakasi explosives transport dispatch.
+                Complete your delivery details for direct Sivakasi explosives transport dispatch.
               </p>
             </div>
 
@@ -245,9 +248,9 @@ const Checkout = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               {/* Shipping Address & Customer Details */}
               <div className="lg:col-span-7 space-y-6">
-                <div className="p-6 sm:p-8 rounded-3xl bg-white border border-gray-200 shadow-sm">
+                <div className="p-6 sm:p-8 rounded-3xl bg-white border border-emerald-100 shadow-sm">
                   <h3 className="font-sans text-lg font-bold text-gray-900 mb-4 pb-3 border-b border-gray-100 flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-[#D81C28]" />
+                    <MapPin className="w-4 h-4 text-[#0D5C3A]" />
                     <span>Customer &amp; Delivery Destination</span>
                   </h3>
 
@@ -264,7 +267,7 @@ const Checkout = () => {
                           value={formData.fullName}
                           onChange={handleInputChange}
                           placeholder="Receiver's name"
-                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#D81C28]"
+                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#0D5C3A] focus:ring-1 focus:ring-[#0D5C3A]"
                         />
                       </div>
 
@@ -279,7 +282,7 @@ const Checkout = () => {
                           value={formData.mobileNumber}
                           onChange={handleInputChange}
                           placeholder="10-digit mobile number"
-                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#D81C28]"
+                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#0D5C3A] focus:ring-1 focus:ring-[#0D5C3A]"
                         />
                       </div>
                     </div>
@@ -294,7 +297,7 @@ const Checkout = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="For order dispatch waybill receipt"
-                        className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#D81C28]"
+                        className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#0D5C3A] focus:ring-1 focus:ring-[#0D5C3A]"
                       />
                     </div>
 
@@ -309,7 +312,7 @@ const Checkout = () => {
                         value={formData.address}
                         onChange={handleInputChange}
                         placeholder="House / Door number, Street name, Landmark"
-                        className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#D81C28] resize-none"
+                        className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#0D5C3A] focus:ring-1 focus:ring-[#0D5C3A] resize-none"
                       ></textarea>
                     </div>
 
@@ -325,7 +328,7 @@ const Checkout = () => {
                           value={formData.district}
                           onChange={handleInputChange}
                           placeholder="e.g. Madurai"
-                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#D81C28]"
+                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#0D5C3A] focus:ring-1 focus:ring-[#0D5C3A]"
                         />
                       </div>
 
@@ -337,7 +340,7 @@ const Checkout = () => {
                           name="state"
                           value={formData.state}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:bg-white focus:border-[#D81C28] cursor-pointer"
+                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:bg-white focus:border-[#0D5C3A] cursor-pointer"
                         >
                           <option value="Tamil Nadu">Tamil Nadu</option>
                           <option value="Karnataka">Karnataka</option>
@@ -361,7 +364,7 @@ const Checkout = () => {
                           value={formData.pincode}
                           onChange={handleInputChange}
                           placeholder="e.g. 625001"
-                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#D81C28]"
+                          className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#0D5C3A] focus:ring-1 focus:ring-[#0D5C3A]"
                         />
                       </div>
                     </div>
@@ -392,7 +395,7 @@ const Checkout = () => {
                         value={formData.orderNotes}
                         onChange={handleInputChange}
                         placeholder="e.g. Deliver via VRL / KPN / ARC parcel service hub"
-                        className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#D81C28]"
+                        className="w-full px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#0D5C3A] focus:ring-1 focus:ring-[#0D5C3A]"
                       />
                     </div>
                   </div>
@@ -409,7 +412,7 @@ const Checkout = () => {
 
               {/* Order Summary & Final Confirmation Button */}
               <div className="lg:col-span-5">
-                <div className="p-6 sm:p-8 rounded-3xl bg-white border border-gray-200 shadow-xl sticky top-28">
+                <div className="p-6 sm:p-8 rounded-3xl bg-white border border-emerald-100 shadow-xl sticky top-28">
                   <h3 className="font-sans text-lg font-bold text-gray-900 mb-4 pb-3 border-b border-gray-100">
                     Order Items ({cartItems.length})
                   </h3>
@@ -421,7 +424,7 @@ const Checkout = () => {
                           <span className="font-bold text-gray-900 text-xs">{item.quantity}x</span>
                           <span className="truncate max-w-[170px]">{item.name}</span>
                         </div>
-                        <span className="font-mono text-[#D81C28] font-bold">
+                        <span className="font-mono text-[#0D5C3A] font-bold">
                           ₹{item.price * item.quantity}
                         </span>
                       </div>
@@ -443,7 +446,7 @@ const Checkout = () => {
 
                   <div className="py-4 border-t border-gray-100 flex justify-between items-baseline mb-6">
                     <span className="font-sans text-base font-bold text-gray-900">Total Order Value:</span>
-                    <span className="font-sans text-2xl font-black text-[#D81C28]">
+                    <span className="font-sans text-2xl font-black text-[#0D5C3A]">
                       ₹{finalTotal}
                     </span>
                   </div>
@@ -451,9 +454,9 @@ const Checkout = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-xl btn-red text-sm font-bold flex items-center justify-center gap-2 shadow-xl shadow-[#D81C28]/20 disabled:opacity-50"
+                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-yellow-300 text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/20 border border-yellow-400/40 transition-all cursor-pointer disabled:opacity-50"
                   >
-                    <Lock className="w-4 h-4" />
+                    <Lock className="w-4 h-4 text-yellow-300" />
                     <span>{isSubmitting ? 'Registering Booking...' : 'Submit Transport Order Booking'}</span>
                   </button>
 
@@ -461,13 +464,13 @@ const Checkout = () => {
                   <div className="mt-4 text-center">
                     <span className="text-[11px] text-gray-500 uppercase tracking-widest block mb-2">Or Direct WhatsApp Booking</span>
                     <a
-                      href={`https://wa.me/918098443633?text=${generateWhatsAppOrderText()}`}
+                      href={`https://wa.me/919994100905?text=${generateWhatsAppOrderText()}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white border border-emerald-300 text-xs font-bold transition-all"
+                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-600 text-emerald-800 hover:text-white border border-emerald-300 text-xs font-bold transition-all"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      <span>Book Instantly on WhatsApp</span>
+                      <span>Book on WhatsApp: 99941 00905</span>
                     </a>
                   </div>
                 </div>
@@ -482,4 +485,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-

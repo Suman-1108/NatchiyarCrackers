@@ -127,10 +127,10 @@ const PopularProductsTable = () => {
       {/* Top Section Header */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
         <div>
-          <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] text-[#C29B38] uppercase block mb-1.5">
+          <span className="text-[11px] sm:text-xs font-extrabold tracking-[0.25em] text-[#CA8A04] uppercase block mb-1.5">
             VERIFIED SIVAKASI INVENTORY
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#7A1518] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#0D5C3A] tracking-tight">
             Discover Our Popular Products
           </h2>
           <p className="text-xs sm:text-sm text-gray-600 mt-2 max-w-2xl leading-relaxed">
@@ -150,12 +150,12 @@ const PopularProductsTable = () => {
                 setCurrentPage(1);
               }}
               placeholder="Search table by name or category..."
-              className="pl-9 pr-4 py-2 text-xs rounded-lg border border-[#E5DAC6] bg-white focus:outline-none focus:border-[#7A1518] w-64 sm:w-72 shadow-2xs"
+              className="pl-9 pr-4 py-2 text-xs rounded-lg border border-[#E5DAC6] bg-white focus:outline-none focus:border-[#0D5C3A] w-64 sm:w-72 shadow-2xs"
             />
           </div>
 
           <span className="bg-[#FAF6F0] border border-[#EAE3D6] text-gray-700 text-xs font-bold px-3 py-2 rounded-lg whitespace-nowrap shadow-2xs">
-            Showing <strong className="text-[#7A1518]">{displayedProducts.length}</strong> items
+            Showing <strong className="text-[#0D5C3A]">{displayedProducts.length}</strong> items
           </span>
         </div>
       </div>
@@ -173,8 +173,8 @@ const PopularProductsTable = () => {
               }}
               className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap border shrink-0 ${
                 isActive
-                  ? 'bg-[#7A1518] text-white border-[#7A1518] shadow-xs'
-                  : 'bg-white hover:bg-[#FAF6F0] text-gray-700 border-[#EAE3D6] hover:border-[#7A1518]/40'
+                  ? 'bg-[#0D5C3A] text-yellow-300 border-[#0D5C3A] shadow-xs'
+                  : 'bg-white hover:bg-emerald-50 text-gray-700 border-gray-200 hover:border-[#0D5C3A]/40'
               }`}
             >
               {tab.name}
@@ -192,7 +192,7 @@ const PopularProductsTable = () => {
               <tr className="bg-[#FAF6F0] border-b border-[#EAE3D6] text-gray-800 text-[11px] sm:text-xs font-extrabold uppercase tracking-wider select-none">
                 <th
                   onClick={() => handleSort('no')}
-                  className="py-3.5 px-4 cursor-pointer hover:text-[#7A1518] whitespace-nowrap"
+                  className="py-3.5 px-4 cursor-pointer hover:text-[#0D5C3A] whitespace-nowrap"
                 >
                   <div className="flex items-center gap-1">
                     <span>S.NO</span>
@@ -202,7 +202,7 @@ const PopularProductsTable = () => {
 
                 <th
                   onClick={() => handleSort('name')}
-                  className="py-3.5 px-5 cursor-pointer hover:text-[#7A1518] whitespace-nowrap min-w-[240px]"
+                  className="py-3.5 px-5 cursor-pointer hover:text-[#0D5C3A] whitespace-nowrap min-w-[240px]"
                 >
                   <div className="flex items-center gap-1">
                     <span>PRODUCT NAME</span>
@@ -220,7 +220,7 @@ const PopularProductsTable = () => {
 
                 <th
                   onClick={() => handleSort('mrp')}
-                  className="py-3.5 px-4 cursor-pointer hover:text-[#7A1518] whitespace-nowrap"
+                  className="py-3.5 px-4 cursor-pointer hover:text-[#0D5C3A] whitespace-nowrap"
                 >
                   <div className="flex items-center gap-1">
                     <span>MRP</span>
@@ -230,11 +230,11 @@ const PopularProductsTable = () => {
 
                 <th
                   onClick={() => handleSort('price')}
-                  className="py-3.5 px-4 cursor-pointer hover:text-[#7A1518] whitespace-nowrap"
+                  className="py-3.5 px-4 cursor-pointer hover:text-[#0D5C3A] whitespace-nowrap"
                 >
                   <div className="flex items-center gap-1">
                     <span>SELLING PRICE</span>
-                    <ArrowUpDown className="w-3 h-3 text-[#7A1518]" />
+                    <ArrowUpDown className="w-3 h-3 text-[#0D5C3A]" />
                   </div>
                 </th>
 
@@ -253,7 +253,7 @@ const PopularProductsTable = () => {
               {displayedProducts.length === 0 ? (
                 <tr>
                   <td colSpan={8} className="py-12 text-center text-gray-500">
-                    <Sparkles className="w-8 h-8 text-[#C29B38] mx-auto mb-2 opacity-50" />
+                    <Sparkles className="w-8 h-8 text-yellow-500 mx-auto mb-2 opacity-50" />
                     <p className="font-bold text-gray-800">No products found matching your search</p>
                     <p className="text-xs text-gray-500 mt-1">Try searching for a different keyword or category</p>
                   </td>
@@ -287,7 +287,7 @@ const PopularProductsTable = () => {
                           <span className="bg-[#E8F5E9] text-[#2E7D32] border border-[#C8E6C9] text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
                             IN STOCK
                           </span>
-                          <span className="text-[#C29B38] text-[11px] font-semibold flex items-center gap-1">
+                          <span className="text-yellow-600 text-[11px] font-semibold flex items-center gap-1">
                             <span>★</span>
                             <span>Festive Choice</span>
                           </span>
@@ -296,7 +296,7 @@ const PopularProductsTable = () => {
 
                       {/* Category */}
                       <td className="py-4 px-4 whitespace-nowrap">
-                        <span className="text-[#B8860B] font-bold text-xs uppercase tracking-wider">
+                        <span className="text-[#CA8A04] font-bold text-xs uppercase tracking-wider">
                           {product.categoryName?.toUpperCase() || 'FIREWORKS'}
                         </span>
                       </td>
@@ -318,7 +318,7 @@ const PopularProductsTable = () => {
                             ₹{product.price}
                           </span>
                           {discountPercent > 0 && (
-                            <span className="text-[11px] font-bold text-[#D81C28]">
+                            <span className="text-[11px] font-bold text-[#0D5C3A]">
                               ({discountPercent}% OFF)
                             </span>
                           )}
@@ -327,12 +327,12 @@ const PopularProductsTable = () => {
 
                       {/* QUANTITY Stepper with Minus, Centered Input, Plus matching reference image */}
                       <td className="py-3.5 px-4 text-center whitespace-nowrap">
-                        <div className="inline-flex items-center border border-[#CFD8DC] rounded-lg bg-white overflow-hidden shadow-2xs hover:border-[#7A1518]/50 focus-within:border-[#7A1518] focus-within:ring-1 focus-within:ring-[#7A1518]/20 transition-all">
+                        <div className="inline-flex items-center border border-[#CFD8DC] rounded-lg bg-white overflow-hidden shadow-2xs hover:border-[#0D5C3A]/50 focus-within:border-[#0D5C3A] focus-within:ring-1 focus-within:ring-[#0D5C3A]/20 transition-all">
                           <button
                             type="button"
                             onClick={() => handleDecrement(product)}
                             disabled={currentQty <= 0}
-                            className="w-8 h-8 flex items-center justify-center text-gray-700 hover:text-[#7A1518] hover:bg-gray-100 disabled:opacity-25 disabled:hover:bg-transparent disabled:hover:text-gray-400 transition-colors select-none font-bold text-base"
+                            className="w-8 h-8 flex items-center justify-center text-gray-700 hover:text-[#0D5C3A] hover:bg-emerald-50 disabled:opacity-25 disabled:hover:bg-transparent disabled:hover:text-gray-400 transition-colors select-none font-bold text-base"
                             aria-label={`Decrease quantity of ${product.name}`}
                           >
                             <Minus className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -350,7 +350,7 @@ const PopularProductsTable = () => {
                           <button
                             type="button"
                             onClick={() => handleIncrement(product)}
-                            className="w-8 h-8 flex items-center justify-center text-gray-700 hover:text-[#7A1518] hover:bg-gray-100 transition-colors select-none font-bold text-base"
+                            className="w-8 h-8 flex items-center justify-center text-gray-700 hover:text-[#0D5C3A] hover:bg-emerald-50 transition-colors select-none font-bold text-base"
                             aria-label={`Increase quantity of ${product.name}`}
                           >
                             <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -362,7 +362,7 @@ const PopularProductsTable = () => {
                       <td className="py-3.5 px-5 text-right whitespace-nowrap">
                         <span
                           className={`font-black font-sans text-sm sm:text-base ${
-                            currentQty > 0 ? 'text-[#9A3412]' : 'text-gray-300'
+                            currentQty > 0 ? 'text-[#0D5C3A]' : 'text-gray-300'
                           }`}
                         >
                           ₹{itemTotal.toLocaleString('en-IN')}
@@ -401,7 +401,7 @@ const PopularProductsTable = () => {
                   onClick={() => setCurrentPage(num)}
                   className={`w-7 h-7 rounded text-xs font-bold transition-colors ${
                     currentPage === num
-                      ? 'bg-[#7A1518] text-white shadow-2xs'
+                      ? 'bg-[#0D5C3A] text-yellow-300 shadow-2xs'
                       : 'border border-[#E5DAC6] bg-white text-gray-700 hover:bg-gray-50'
                   }`}
                 >

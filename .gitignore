@@ -22,3 +22,6 @@ build/
 .DS_Store
 Thumbs.db
 
+# Large raw video frame extractions (optimized webp frames stored in diwali-frames)
+frontend/public/assets/Family_celebrating_Diwali_with_f*
+

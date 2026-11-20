@@ -49,7 +49,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
             <span className="bg-[#E8F5E9] text-[#2E7D32] border border-[#C8E6C9] text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
               IN STOCK
             </span>
-            <span className="text-[#C29B38] text-[11px] font-semibold flex items-center gap-1">
+            <span className="text-[#CA8A04] text-[11px] font-semibold flex items-center gap-1">
               <span>★</span>
               <span>Festive Choice</span>
             </span>
@@ -57,7 +57,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
         </td>
 
         <td className="py-4 px-4 whitespace-nowrap">
-          <span className="text-[#B8860B] font-bold text-xs uppercase tracking-wider">
+          <span className="text-[#0D5C3A] font-bold text-xs uppercase tracking-wider">
             {product.categoryName?.toUpperCase() || 'FIREWORKS'}
           </span>
         </td>
@@ -76,7 +76,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
               ₹{product.price}
             </span>
             {discountPercent > 0 && (
-              <span className="text-[11px] font-bold text-[#D81C28]">
+              <span className="text-[11px] font-bold text-[#0D5C3A]">
                 ({discountPercent}% OFF)
               </span>
             )}
@@ -91,7 +91,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
               className={`px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition-all active:scale-95 shadow-2xs ${
                 addedAnim
                   ? 'bg-emerald-600 text-white'
-                  : 'bg-[#7A1518] hover:bg-[#8B1E1E] text-white'
+                  : 'bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300'
               }`}
             >
               {addedAnim ? (
@@ -109,7 +109,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
 
             <Link
               to={`/products/${product.id}`}
-              className="px-2.5 py-1.5 rounded-md border border-[#E5DAC6] hover:border-[#7A1518] text-gray-700 hover:text-[#7A1518] text-xs font-semibold flex items-center gap-1 transition-colors bg-white"
+              className="px-2.5 py-1.5 rounded-md border border-gray-200 hover:border-[#0D5C3A] text-gray-700 hover:text-[#0D5C3A] text-xs font-semibold flex items-center gap-1 transition-colors bg-white"
             >
               <Eye className="w-3.5 h-3.5" />
               <span>Details</span>
@@ -128,16 +128,16 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
       viewport={{ once: true, margin: '-20px' }}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
-      className="group relative flex flex-col justify-between rounded-2xl bg-white text-gray-900 overflow-hidden shadow-md hover:shadow-xl border border-gray-200 hover:border-[#7A1518]/40 transition-all duration-300 p-5 font-sans"
+      className="group relative flex flex-col justify-between rounded-2xl bg-white text-gray-900 overflow-hidden shadow-md hover:shadow-xl border border-gray-200 hover:border-[#0D5C3A]/50 transition-all duration-300 p-5 font-sans"
     >
       {/* Top Header: Serial No & Category */}
       <div>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <span className="w-8 h-8 rounded-lg bg-gray-900 text-white text-xs font-black flex items-center justify-center font-mono">
+            <span className="w-8 h-8 rounded-lg bg-gray-900 text-yellow-300 text-xs font-black flex items-center justify-center font-mono">
               #{product.no || product.id?.slice(0, 3)}
             </span>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A1518] bg-red-50 border border-red-100 px-2.5 py-0.5 rounded-full">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#0D5C3A] bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
               {product.categoryName}
             </span>
           </div>
@@ -145,9 +145,9 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
           <button
             onClick={toggleWishlist}
             aria-label="Add to wishlist"
-            className="w-7 h-7 rounded-full bg-gray-50 hover:bg-red-50 flex items-center justify-center text-gray-400 hover:text-[#7A1518] transition-colors"
+            className="w-7 h-7 rounded-full bg-gray-50 hover:bg-emerald-50 flex items-center justify-center text-gray-400 hover:text-[#0D5C3A] transition-colors"
           >
-            <Heart className={`w-3.5 h-3.5 ${isWishlisted ? 'fill-[#7A1518] text-[#7A1518]' : ''}`} />
+            <Heart className={`w-3.5 h-3.5 ${isWishlisted ? 'fill-[#0D5C3A] text-[#0D5C3A]' : ''}`} />
           </button>
         </div>
 
@@ -185,7 +185,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
           </div>
 
           {discountPercent > 0 && (
-            <span className="text-[11px] font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
+            <span className="text-[11px] font-black text-[#0D5C3A] bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
               {discountPercent}% OFF
             </span>
           )}
@@ -214,13 +214,13 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
             </button>
           </div>
 
-          {/* Add to Cart Button */}
+          {/* Add to Cart Button (Forest Green & Yellow) */}
           <button
             onClick={handleAdd}
             className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all ${
               addedAnim 
                 ? 'bg-emerald-600 text-white' 
-                : 'bg-[#7A1518] hover:bg-[#8B1E1E] text-white'
+                : 'bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300'
             }`}
           >
             {addedAnim ? (
