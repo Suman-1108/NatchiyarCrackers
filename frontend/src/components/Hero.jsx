@@ -1,58 +1,60 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronRight, Sparkles, Flame, Gift, Star, ChevronDown } from 'lucide-react';
+import { ChevronRight, Sparkles, Flame, Gift, Star } from 'lucide-react';
 
-const TOTAL_FRAMES = 180;
+const DESKTOP_FRAMES = 180;
+const MOBILE_FRAMES = 240;
 
-const getFrameUrl = (frameIndex) => {
-  // Frames are named frame-001.webp to frame-180.webp
+const getDesktopFrameUrl = (frameIndex) => {
   const padded = String(frameIndex).padStart(3, '0');
   return `/assets/diwali-frames/frame-${padded}.webp`;
 };
 
-// Aspect-ratio preserving rendering on canvas (handles both widescreen cover and mobile framing)
-function drawAdaptiveFrame(ctx, img, canvasW, canvasH) {
+const getMobileFrameUrl = (frameIndex) => {
+  const padded = String(frameIndex).padStart(3, '0');
+  return `/assets/mobile-diwali-frames/frame-${padded}.webp`;
+};
+
+// Full-bleed aspect-ratio preserving frame rendering (clean cover for both portrait mobile and landscape desktop)
+function drawCoverFrame(ctx, img, canvasW, canvasH) {
   if (!img) return;
   const iw = img.naturalWidth || img.width;
   const ih = img.naturalHeight || img.height;
   if (!iw || !ih) return;
 
-  const isPortrait = canvasH > canvasW;
-
   ctx.clearRect(0, 0, canvasW, canvasH);
 
-  if (isPortrait) {
-    // Mobile Portrait: fit entire 16:9 width without cutting off the family on sides
-    const scale = canvasW / iw;
-    const destW = canvasW;
-    const destH = ih * scale;
-    const destX = 0;
-    const destY = (canvasH - destH) / 2;
+  const scale = Math.max(canvasW / iw, canvasH / ih);
+  const destW = iw * scale;
+  const destH = ih * scale;
+  const destX = (canvasW - destW) / 2;
+  const destY = (canvasH - destH) / 2;
 
-    ctx.drawImage(img, 0, 0, iw, ih, destX, destY, destW, destH);
-  } else {
-    // Desktop / Landscape: full-bleed cover
-    const scale = Math.max(canvasW / iw, canvasH / ih);
-    const destW = iw * scale;
-    const destH = ih * scale;
-    const destX = (canvasW - destW) / 2;
-    const destY = (canvasH - destH) / 2;
-
-    ctx.drawImage(img, 0, 0, iw, ih, destX, destY, destW, destH);
-  }
+  ctx.drawImage(img, 0, 0, iw, ih, destX, destY, destW, destH);
 }
+
+const checkIsMobile = () => {
+  if (typeof window === 'undefined') return false;
+  return window.innerWidth < 768;
+};
 
 const Hero = () => {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
-  const imagesRef = useRef([]);
+
+  const desktopImagesRef = useRef([]);
+  const mobileImagesRef = useRef([]);
+
   const targetFrameRef = useRef(0);
   const currentFrameRef = useRef(0);
   const animationFrameId = useRef(null);
 
+  const [isMobile, setIsMobile] = useState(checkIsMobile);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const totalFrames = isMobile ? MOBILE_FRAMES : DESKTOP_FRAMES;
 
   // 4 Category quick cards positioned cleanly below the cinematic scroll banner
   const quickCategories = [
@@ -97,15 +99,21 @@ const Hero = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const clampedIdx = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(frameIdx)));
-    const img = imagesRef.current[clampedIdx] || imagesRef.current[0];
-    if (img && img.complete && img.naturalWidth > 0) {
-      drawAdaptiveFrame(ctx, img, canvas.width, canvas.height);
-    }
-  }, []);
+    const currentImages = isMobile ? mobileImagesRef.current : desktopImagesRef.current;
+    const maxIdx = (isMobile ? MOBILE_FRAMES : DESKTOP_FRAMES) - 1;
+    const clampedIdx = Math.max(0, Math.min(maxIdx, Math.round(frameIdx)));
 
-  // Responsive Canvas Resolution (handles both mobile portrait & desktop widescreen)
+    const img = currentImages[clampedIdx] || currentImages[0];
+    if (img && img.complete && img.naturalWidth > 0) {
+      drawCoverFrame(ctx, img, canvas.width, canvas.height);
+    }
+  }, [isMobile]);
+
+  // Handle canvas sizing and responsiveness
   const handleResize = useCallback(() => {
+    const mobileNow = checkIsMobile();
+    setIsMobile(mobileNow);
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -114,29 +122,38 @@ const Hero = () => {
     renderFrame(currentFrameRef.current);
   }, [renderFrame]);
 
-  // Frame Preloading
+  // Frame Preloading (Mobile 240 frames vs Desktop 180 frames)
   useEffect(() => {
-    imagesRef.current = new Array(TOTAL_FRAMES);
+    const activeCache = isMobile ? mobileImagesRef.current : desktopImagesRef.current;
+    const frameCount = isMobile ? MOBILE_FRAMES : DESKTOP_FRAMES;
+    const getUrl = isMobile ? getMobileFrameUrl : getDesktopFrameUrl;
+
+    if (activeCache.length < frameCount) {
+      activeCache.length = frameCount;
+    }
 
     // 1. Load First Frame immediately for instant render
     const firstImg = new Image();
-    firstImg.src = getFrameUrl(1);
+    firstImg.src = getUrl(1);
     firstImg.onload = () => {
-      imagesRef.current[0] = firstImg;
+      activeCache[0] = firstImg;
       handleResize();
       setIsLoaded(true);
     };
 
-    // 2. Preload remaining frames in background
-    for (let i = 2; i <= TOTAL_FRAMES; i++) {
-      const img = new Image();
-      img.src = getFrameUrl(i);
-      img.onload = () => {
-        imagesRef.current[i - 1] = img;
-      };
-      img.onerror = () => {
-        imagesRef.current[i - 1] = imagesRef.current[i - 2] || imagesRef.current[0];
-      };
+    // 2. Preload remaining frames asynchronously in background
+    for (let i = 2; i <= frameCount; i++) {
+      if (!activeCache[i - 1]) {
+        const img = new Image();
+        img.src = getUrl(i);
+        img.onload = () => {
+          activeCache[i - 1] = img;
+        };
+        img.onerror = () => {
+          // Fallback to neighboring frame
+          activeCache[i - 1] = activeCache[i - 2] || activeCache[0];
+        };
+      }
     }
 
     window.addEventListener('resize', handleResize);
@@ -145,7 +162,7 @@ const Hero = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleResize);
     };
-  }, [handleResize]);
+  }, [isMobile, handleResize]);
 
   // Smooth Render Loop (Lerp between current and target frame)
   useEffect(() => {
@@ -155,8 +172,8 @@ const Hero = () => {
       if (!isRunning) return;
 
       const diff = targetFrameRef.current - currentFrameRef.current;
-      if (Math.abs(diff) > 0.05) {
-        currentFrameRef.current += diff * 0.18;
+      if (Math.abs(diff) > 0.04) {
+        currentFrameRef.current += diff * 0.2;
         renderFrame(currentFrameRef.current);
       }
 
@@ -173,7 +190,7 @@ const Hero = () => {
     };
   }, [renderFrame]);
 
-  // Scroll Progress Listener (Mobile touch optimized)
+  // Scroll Progress Listener (Maps viewport scroll directly to cinematic frame scrubber)
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
@@ -188,10 +205,8 @@ const Hero = () => {
 
       setScrollProgress(progress);
 
-      const frameIdx = Math.min(
-        TOTAL_FRAMES - 1,
-        Math.max(0, Math.floor(progress * (TOTAL_FRAMES - 1)))
-      );
+      const maxIdx = (isMobile ? MOBILE_FRAMES : DESKTOP_FRAMES) - 1;
+      const frameIdx = Math.min(maxIdx, Math.max(0, Math.floor(progress * maxIdx)));
       targetFrameRef.current = frameIdx;
     };
 
@@ -201,43 +216,35 @@ const Hero = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <>
       {/* =========================================================================
-          1. PURE CINEMATIC SCROLL BANNER (Mobile-Optimized Viewport)
+          1. PURE CINEMATIC SCROLL BANNER (Dedicated Portrait Mobile & Widescreen Desktop)
          ========================================================================= */}
       <section
         ref={containerRef}
-        className="relative w-full h-[170vh] sm:h-[260vh] bg-[#062D1B]"
+        className="relative w-full h-[200vh] sm:h-[260vh] bg-[#062D1B]"
       >
         {/* Sticky Viewport:
             - Mobile: accounts for fixed header (top-[68px]), viewport height h-[calc(100dvh-68px)]
             - Desktop: top-0, h-screen
         */}
         <div className="sticky top-[68px] sm:top-0 w-full h-[calc(100dvh-68px)] sm:h-screen overflow-hidden flex flex-col items-center justify-center bg-[#062D1B]">
-          {/* Subtle Ambient Glow for mobile portrait */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-40 sm:opacity-0"
-            style={{
-              background: 'radial-gradient(ellipse at center, rgba(250,204,21,0.15) 0%, rgba(6,45,27,0.8) 70%, #062D1B 100%)'
-            }}
-          />
-
-          {/* HTML5 Canvas Rendering 180 Frames with adaptive framing */}
+          {/* HTML5 Canvas Rendering 240 Mobile Frames (Portrait 9:16) or 180 Desktop Frames (Widescreen 16:9) */}
           <div className="relative w-full h-full flex items-center justify-center">
             <canvas
               ref={canvasRef}
-              className="w-full h-full object-contain sm:object-cover select-none pointer-events-none block z-10"
+              className="w-full h-full object-cover select-none pointer-events-none block z-10"
             />
 
             {/* Fallback frame before canvas initializes */}
             {!isLoaded && (
               <img
-                src="/assets/diwali-frames/frame-001.webp"
+                src={isMobile ? "/assets/mobile-diwali-frames/frame-001.webp" : "/assets/diwali-frames/frame-001.webp"}
                 alt="Sri Natchiyar Crackers Diwali Cinematic Banner"
-                className="absolute inset-0 w-full h-full object-contain sm:object-cover block z-10"
+                className="absolute inset-0 w-full h-full object-cover block z-10"
               />
             )}
           </div>
