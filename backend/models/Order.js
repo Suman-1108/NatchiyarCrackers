@@ -17,18 +17,22 @@ const orderSchema = new mongoose.Schema({
   customer: {
     fullName: { type: String, required: true },
     phone: { type: String, required: true },
-    secondaryPhone: { type: String, default: '' },
+    mobileNumber: { type: String, default: '' },
+    email: { type: String, default: '' },
+    address: { type: String, required: true },
     district: { type: String, required: true },
     state: { type: String, default: 'Tamil Nadu' },
-    address: { type: String, required: true },
+    pincode: { type: String, default: '' },
     preferredTransport: { type: String, default: '' },
-    notes: { type: String, default: '' }
+    notes: { type: String, default: '' },
+    paymentPreference: { type: String, default: 'cash_on_hub_delivery' }
   },
   items: [orderItemSchema],
   subtotal: { type: Number, required: true },
   deliveryFee: { type: Number, default: 0 },
   total: { type: Number, required: true },
   status: { type: String, default: 'AWAITING_TRANSPORT_CONFIRMATION' },
+  emailSent: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now }
 }, { timestamps: true });
 

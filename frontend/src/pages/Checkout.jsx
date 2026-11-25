@@ -83,7 +83,7 @@ const Checkout = () => {
     try {
       const res = await apiService.submitOrderIntent(orderPayload);
       setOrderSubmittedData({
-        orderRef: `SNC-ORD-${Date.now().toString().slice(-6)}`,
+        orderRef: res.data?.orderRef || `SNC-ORD-${Date.now().toString().slice(-6)}`,
         requiresBackend: res.requiresBackend,
         instructions: res.instructions || 'Order details saved. Please confirm transport booking with Sri Natchiyar Crackers sales desk.',
         customer: { ...formData },
@@ -92,6 +92,7 @@ const Checkout = () => {
         deliveryFee,
         total: finalTotal
       });
+      toast.success(formData.email ? 'Order confirmed! Confirmation email sent.' : 'Order confirmed successfully!');
       clearCart();
     } catch {
       toast.error('Network error during order submission. Connecting via WhatsApp...');
@@ -181,6 +182,15 @@ const Checkout = () => {
                   <span className="text-gray-500 font-bold uppercase tracking-wider text-[10px]">Mobile Contact:</span>
                   <span className="font-bold text-gray-900">{orderSubmittedData.customer?.mobileNumber || formData.mobileNumber}</span>
                 </div>
+                {(orderSubmittedData.customer?.email || formData.email) && (
+                  <div className="flex items-center justify-between pb-2 border-b border-emerald-50">
+                    <span className="text-gray-500 font-bold uppercase tracking-wider text-[10px]">Email Confirmation:</span>
+                    <span className="font-bold text-emerald-700 flex items-center gap-1 text-[11px]">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 inline" />
+                      <span>{orderSubmittedData.customer?.email || formData.email}</span>
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between pb-2 border-b border-emerald-50">
                   <span className="text-gray-500 font-bold uppercase tracking-wider text-[10px]">Delivery Destination:</span>
                   <span className="font-bold text-gray-900">
