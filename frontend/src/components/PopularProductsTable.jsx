@@ -173,7 +173,7 @@ const PopularProductsTable = () => {
               }}
               className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap border shrink-0 ${
                 isActive
-                  ? 'bg-[#0D5C3A] text-yellow-300 border-[#0D5C3A] shadow-xs'
+                  ? 'bg-[#0D5C3A] text-white border-[#0D5C3A] shadow-xs'
                   : 'bg-white hover:bg-emerald-50 text-gray-700 border-gray-200 hover:border-[#0D5C3A]/40'
               }`}
             >

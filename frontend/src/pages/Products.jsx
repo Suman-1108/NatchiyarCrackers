@@ -181,7 +181,7 @@ const Products = () => {
                   {cat.slug !== 'all' && (
                     <span
                       className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
-                        isActive ? 'bg-yellow-400 text-[#073822]' : 'bg-gray-100 text-gray-600'
+                        isActive ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'
                       }`}
                     >
                       {cat.count}
