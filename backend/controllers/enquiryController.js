@@ -1,7 +1,9 @@
-// In-memory or file-backed store for enquiries
+import Enquiry from '../models/Enquiry.js';
+import { isDbConnected } from '../config/db.js';
+
 const enquiriesStore = [];
 
-export const createEnquiry = (req, res) => {
+export const createEnquiry = async (req, res) => {
   try {
     const { name, phone, email, enquiryType, message } = req.body;
 
@@ -20,8 +22,18 @@ export const createEnquiry = (req, res) => {
       createdAt: new Date().toISOString()
     };
 
-    enquiriesStore.push(enquiryRecord);
-    console.log('[ENQUIRY RECEIVED]', enquiryRecord);
+    if (isDbConnected()) {
+      try {
+        await Enquiry.create(enquiryRecord);
+        console.log('[ENQUIRY SAVED TO MONGODB]', enquiryRecord.id, name);
+      } catch (dbErr) {
+        console.error('Failed to save enquiry to MongoDB, falling back to memory:', dbErr.message);
+        enquiriesStore.push(enquiryRecord);
+      }
+    } else {
+      enquiriesStore.push(enquiryRecord);
+      console.log('[ENQUIRY STORED IN-MEMORY]', enquiryRecord);
+    }
 
     res.status(201).json({
       success: true,
@@ -33,7 +45,14 @@ export const createEnquiry = (req, res) => {
   }
 };
 
-export const getEnquiries = (req, res) => {
-  res.json({ success: true, count: enquiriesStore.length, data: enquiriesStore });
+export const getEnquiries = async (req, res) => {
+  try {
+    if (isDbConnected()) {
+      const enquiries = await Enquiry.find().sort({ createdAt: -1 });
+      return res.json({ success: true, count: enquiries.length, data: enquiries });
+    }
+    res.json({ success: true, count: enquiriesStore.length, data: enquiriesStore });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Error fetching enquiries', error: error.message });
+  }
 };
-

@@ -1,11 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import { config } from './config/config.js';
+import { connectDB, isDbConnected } from './config/db.js';
+import { seedDatabase } from './utils/seedData.js';
 import productRoutes from './routes/productRoutes.js';
 import enquiryRoutes from './routes/enquiryRoutes.js';
 import wholesaleRoutes from './routes/wholesaleRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import { notFound, errorHandler } from './middleware/errorHandler.js';
+import { getCategories } from './controllers/productController.js';
 
 const app = express();
 
@@ -19,18 +22,18 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Health Check API
+// Health Check API with MongoDB status
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ONLINE',
     service: 'NATCHIYAR CRACKERS API Server',
+    database: isDbConnected() ? 'CONNECTED (MongoDB)' : 'DISCONNECTED (In-memory fallback)',
     location: config.store.city,
     time: new Date().toISOString()
   });
 });
 
 // Category Route Alias
-import { getCategories } from './controllers/productController.js';
 app.get('/api/categories', getCategories);
 
 // Mount API routes
@@ -45,10 +48,18 @@ app.use(errorHandler);
 
 const PORT = config.port;
 
-app.listen(PORT, () => {
-  console.log(`🎆 NATCHIYAR CRACKERS API running on port ${PORT} [${config.nodeEnv}]`);
-  console.log(`📍 Sivakasi Headquarters: +91 ${config.store.phone}`);
-});
+// Connect to MongoDB and start server
+const startServer = async () => {
+  await connectDB();
+  await seedDatabase();
+
+  app.listen(PORT, () => {
+    console.log(`🎆 NATCHIYAR CRACKERS API running on port ${PORT} [${config.nodeEnv}]`);
+    console.log(`🍃 Database Status: ${isDbConnected() ? 'Connected to MongoDB' : 'In-memory fallback'}`);
+    console.log(`📍 Sivakasi Headquarters: +91 ${config.store.phone}`);
+  });
+};
+
+startServer();
 
 export default app;
-
