@@ -104,7 +104,7 @@ const Contact = () => {
                   href="https://wa.me/919994100905?text=Hi%20Sri%20Natchiyar%20Crackers%20I%20want%20to%20order"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 hover:text-emerald-900 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-white bg-[#25D366] hover:bg-[#1EBE5D] px-3 py-1.5 rounded-lg border border-[#25D366] transition-colors shadow-2xs"
                 >
                   <span>Chat on WhatsApp: +91 99941 00905</span>
                   <span>→</span>
@@ -242,9 +242,9 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-yellow-300 font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/25 border border-yellow-400/40 transition-all cursor-pointer disabled:opacity-50"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-white font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/25 border border-emerald-500/40 transition-all cursor-pointer disabled:opacity-50"
                 >
-                  <Send className="w-4 h-4 text-yellow-300" />
+                  <Send className="w-4 h-4 text-white" />
                   <span>{isSubmitting ? 'Sending Message...' : 'Send Message To Sivakasi Office'}</span>
                 </button>
               </form>

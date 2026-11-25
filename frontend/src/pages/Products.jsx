@@ -173,7 +173,7 @@ const Products = () => {
                   onClick={() => handleCategorySelect(cat.slug)}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide whitespace-nowrap transition-all duration-200 flex items-center gap-1.5 border shrink-0 ${
                     isActive
-                      ? 'bg-[#0D5C3A] text-yellow-300 border-[#0D5C3A] shadow-xs'
+                      ? 'bg-[#0D5C3A] text-white border-[#0D5C3A] shadow-xs'
                       : 'bg-white hover:bg-emerald-50 text-gray-700 border-emerald-200/80 hover:border-[#0D5C3A]/60'
                   }`}
                 >
@@ -426,7 +426,7 @@ const Products = () => {
                     onClick={() => setCurrentPage(num)}
                     className={`w-7 h-7 rounded text-xs font-bold transition-colors ${
                       currentPage === num
-                        ? 'bg-[#0D5C3A] text-yellow-300 shadow-2xs'
+                        ? 'bg-[#0D5C3A] text-white shadow-2xs'
                         : 'border border-emerald-200 bg-white text-gray-700 hover:bg-emerald-50'
                     }`}
                   >

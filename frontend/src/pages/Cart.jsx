@@ -48,9 +48,9 @@ const Cart = () => {
           </p>
           <Link
             to="/products"
-            className="px-8 py-4 rounded-xl text-sm font-bold inline-flex items-center gap-2 bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300 border border-yellow-400/40 shadow-xl shadow-[#0D5C3A]/20 transition-all"
+            className="px-8 py-4 rounded-xl text-sm font-bold inline-flex items-center gap-2 bg-[#0D5C3A] hover:bg-[#073822] text-white border border-emerald-500/40 shadow-xl shadow-[#0D5C3A]/20 transition-all"
           >
-            <Sparkles className="w-4 h-4 text-yellow-300" />
+            <Sparkles className="w-4 h-4 text-white" />
             <span>Explore Fireworks Catalogue</span>
           </Link>
         </div>
@@ -77,7 +77,7 @@ const Cart = () => {
 
           <button
             onClick={clearCart}
-            className="inline-flex items-center gap-1.5 text-xs text-gray-600 hover:text-[#0D5C3A] px-3 py-1.5 rounded-lg border border-gray-300 hover:border-emerald-500/40 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs text-white bg-red-600 hover:bg-red-700 px-3 py-1.5 rounded-lg border border-red-600 transition-colors"
           >
             <Trash2 className="w-3.5 h-3.5" />
             <span>Clear Cart</span>
@@ -187,10 +187,10 @@ const Cart = () => {
               <button
                 onClick={() => navigate('/checkout')}
                 disabled={!isEligibleForOrder}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-yellow-300 font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/20 border border-yellow-400/40 transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-white font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/20 border border-emerald-500/40 transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               >
                 <span>Proceed to Checkout</span>
-                <ArrowRight className="w-4 h-4 text-yellow-300" />
+                <ArrowRight className="w-4 h-4 text-white" />
               </button>
 
               {/* Direct WhatsApp Order Button */}
@@ -199,9 +199,9 @@ const Cart = () => {
                   href={`https://wa.me/919994100905?text=${getWhatsAppOrderMessage()}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 rounded-xl bg-emerald-50 hover:bg-emerald-600 text-emerald-800 hover:text-white border border-emerald-300 font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-xs"
+                  className="w-full py-3 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white border border-[#25D366] font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-xs"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4 text-white" />
                   <span>Send Order to WhatsApp: 99941 00905</span>
                 </a>
               </div>

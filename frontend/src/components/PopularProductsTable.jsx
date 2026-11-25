@@ -401,7 +401,7 @@ const PopularProductsTable = () => {
                   onClick={() => setCurrentPage(num)}
                   className={`w-7 h-7 rounded text-xs font-bold transition-colors ${
                     currentPage === num
-                      ? 'bg-[#0D5C3A] text-yellow-300 shadow-2xs'
+                      ? 'bg-[#0D5C3A] text-white shadow-2xs'
                       : 'border border-[#E5DAC6] bg-white text-gray-700 hover:bg-gray-50'
                   }`}
                 >

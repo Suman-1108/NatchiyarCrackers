@@ -91,7 +91,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
               className={`px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition-all active:scale-95 shadow-2xs ${
                 addedAnim
                   ? 'bg-emerald-600 text-white'
-                  : 'bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300'
+                  : 'bg-[#0D5C3A] hover:bg-[#073822] text-white'
               }`}
             >
               {addedAnim ? (
@@ -109,7 +109,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
 
             <Link
               to={`/products/${product.id}`}
-              className="px-2.5 py-1.5 rounded-md border border-gray-200 hover:border-[#0D5C3A] text-gray-700 hover:text-[#0D5C3A] text-xs font-semibold flex items-center gap-1 transition-colors bg-white"
+              className="px-2.5 py-1.5 rounded-md border border-gray-600 bg-gray-700 hover:bg-gray-800 text-white text-xs font-semibold flex items-center gap-1 transition-colors"
             >
               <Eye className="w-3.5 h-3.5" />
               <span>Details</span>
@@ -220,7 +220,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
             className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all ${
               addedAnim 
                 ? 'bg-emerald-600 text-white' 
-                : 'bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300'
+                : 'bg-[#0D5C3A] hover:bg-[#073822] text-white'
             }`}
           >
             {addedAnim ? (

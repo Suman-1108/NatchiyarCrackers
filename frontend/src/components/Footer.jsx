@@ -38,16 +38,16 @@ const Footer = () => {
                 href="https://wa.me/919994100905?text=Hi%20Sri%20Natchiyar%20Crackers%2C%20I%20would%20like%20to%20order%20crackers"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#FEF9C3] border border-yellow-300 text-[#073822] hover:bg-yellow-200 transition-all text-xs font-black shadow-2xs"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white border border-[#25D366] transition-all text-xs font-black shadow-2xs"
               >
-                <MessageCircle className="w-4 h-4 text-[#CA8A04]" />
+                <MessageCircle className="w-4 h-4 text-white" />
                 <span>WhatsApp Enquiry</span>
               </a>
               <a
                 href="tel:9994100905"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-50 border border-emerald-300 text-[#0D5C3A] hover:bg-[#0D5C3A] hover:text-yellow-300 transition-all text-xs font-bold"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0D5C3A] border border-[#09472c] text-white hover:bg-[#073822] transition-all text-xs font-bold shadow-2xs"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 text-white shrink-0" />
                 <span>99941 00905</span>
               </a>
             </div>

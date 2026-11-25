@@ -183,7 +183,7 @@ const Wholesale = () => {
                   <div className="pt-4 flex justify-center gap-4">
                     <button
                       onClick={() => setSubmittedRef(null)}
-                      className="px-6 py-2.5 rounded-xl bg-gray-100 text-gray-800 text-xs font-bold hover:bg-gray-200"
+                      className="px-6 py-2.5 rounded-xl bg-gray-700 text-white text-xs font-bold hover:bg-gray-800"
                     >
                       Submit Another Query
                     </button>
@@ -191,7 +191,7 @@ const Wholesale = () => {
                       href={`https://wa.me/919994100905?text=${encodeURIComponent(`Hi Sri Natchiyar Crackers, checking status for wholesale ref: ${submittedRef}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-2.5 rounded-xl bg-[#0D5C3A] text-yellow-300 text-xs font-bold hover:bg-[#073822] transition-colors"
+                      className="px-6 py-2.5 rounded-xl bg-[#0D5C3A] text-white text-xs font-bold hover:bg-[#073822] transition-colors"
                     >
                       Follow Up on WhatsApp
                     </a>
@@ -348,9 +348,9 @@ const Wholesale = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-yellow-300 font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/20 border border-yellow-400/40 transition-all cursor-pointer disabled:opacity-50"
+                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-white font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/20 border border-emerald-500/40 transition-all cursor-pointer disabled:opacity-50"
                   >
-                    <Send className="w-4 h-4 text-yellow-300" />
+                    <Send className="w-4 h-4 text-white" />
                     <span>{isSubmitting ? 'Transmitting Request...' : 'Submit Wholesale Quotation Request'}</span>
                   </button>
                 </form>

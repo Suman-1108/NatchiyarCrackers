@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { ShoppingBag, Menu, X, Search } from 'lucide-react';
+import { ShoppingBag, Menu, X, Search, Phone } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../assets/logo/natchiyar_logo.png';
@@ -15,6 +15,7 @@ const Navbar = ({ onOpenSearch }) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 15);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -176,7 +177,7 @@ const Navbar = ({ onOpenSearch }) => {
 
             <span className="flex items-center gap-1.5 sm:gap-2">
               <span className="text-yellow-400">•</span>
-              <span className="text-sm sm:text-base leading-none">📞</span>
+              <Phone className="w-3.5 h-3.5 text-white shrink-0" />
               <span className="text-white">Direct Phone:</span>
               <span className="text-yellow-300 font-black">99941 00905 / 94427 01264 / 93637 79531</span>
             </span>
@@ -215,7 +216,7 @@ const Navbar = ({ onOpenSearch }) => {
 
             <span className="flex items-center gap-1.5 sm:gap-2">
               <span className="text-yellow-400">•</span>
-              <span className="text-sm sm:text-base leading-none">📞</span>
+              <Phone className="w-3.5 h-3.5 text-white shrink-0" />
               <span className="text-white">Direct Phone:</span>
               <span className="text-yellow-300 font-black">99941 00905 / 94427 01264 / 93637 79531</span>
             </span>
@@ -294,7 +295,7 @@ const Navbar = ({ onOpenSearch }) => {
               className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-emerald-50 hover:border-emerald-300 text-gray-700 hover:text-[#0D5C3A] transition-colors relative"
             >
               <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-700" strokeWidth={1.8} />
-              <span className="absolute -top-1 -right-1 sm:-top-1.5 sm:-right-1.5 bg-[#0D5C3A] text-yellow-300 text-[9px] sm:text-[10px] font-bold w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shadow-xs">
+              <span className="absolute -top-1 -right-1 sm:-top-1.5 sm:-right-1.5 bg-[#0D5C3A] text-white text-[9px] sm:text-[10px] font-bold w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shadow-xs">
                 {totalItemsCount > 0 ? totalItemsCount : '0'}
               </span>
             </Link>
@@ -305,9 +306,9 @@ const Navbar = ({ onOpenSearch }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="h-8 sm:h-10 px-2 sm:px-3.5 sm:py-2 rounded-md bg-[#FEF9C3] border border-[#FDE047] hover:bg-[#FEF08A] text-[#073822] font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-colors shadow-2xs"
+              className="h-8 sm:h-10 px-2 sm:px-3.5 sm:py-2 rounded-md bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-colors shadow-2xs"
             >
-              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#CA8A04] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12.031 2C6.495 2 2 6.494 2 12.029c0 1.942.553 3.754 1.513 5.293L2 22l4.832-1.472a10.02 10.02 0 0 0 5.199 1.501h.005c5.533 0 10.029-4.494 10.029-10.029A10.03 10.03 0 0 0 12.031 2zm5.879 14.288c-.246.691-1.229 1.326-1.72 1.385-.458.056-1.045.081-3.32-.861-2.678-1.107-4.417-3.83-4.551-4.009-.133-.18-1.085-1.444-1.085-2.754 0-1.31.688-1.954.933-2.221.246-.267.537-.333.716-.333.18 0 .36 0 .518.01.168.01.393-.064.615.469.229.549.78 1.905.849 2.044.068.14.114.305.023.486-.091.18-.137.293-.272.451-.137.158-.288.353-.411.474-.137.135-.28.283-.121.556.16.273.71 1.171 1.523 1.895 1.047.933 1.93 1.223 2.203 1.358.273.136.434.114.595-.069.161-.183.688-.8.871-1.074.183-.273.366-.228.614-.137.248.091 1.57.74 1.838.875.268.136.447.203.513.317.066.114.066.66-.18 1.351z"/>
               </svg>
               <span className="hidden sm:inline">WhatsApp</span>
@@ -317,9 +318,10 @@ const Navbar = ({ onOpenSearch }) => {
             <a
               href="tel:9994100905"
               aria-label="Call Sri Natchiyar Crackers"
-              className="h-8 sm:h-10 px-2 sm:px-3 rounded-md bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300 font-bold text-xs sm:text-sm hidden md:flex items-center gap-1.5 transition-colors shadow-2xs"
+              className="h-8 sm:h-10 px-2 sm:px-3 rounded-md bg-[#0D5C3A] hover:bg-[#073822] text-white font-bold text-xs sm:text-sm hidden md:flex items-center gap-1.5 transition-colors shadow-2xs"
             >
-              <span>📞 99941 00905</span>
+              <Phone className="w-3.5 h-3.5 text-white shrink-0" />
+              <span>99941 00905</span>
             </a>
 
             {/* Mobile Hamburger Toggle */}
@@ -388,17 +390,18 @@ const Navbar = ({ onOpenSearch }) => {
               <div className="pt-3 border-t border-gray-100 flex flex-col gap-2">
                 <a
                   href="tel:9994100905"
-                  className="py-2.5 px-4 rounded-md bg-[#0D5C3A] text-yellow-300 font-bold text-center flex items-center justify-center gap-2"
+                  className="py-2.5 px-4 rounded-md bg-[#0D5C3A] text-white font-bold text-center flex items-center justify-center gap-2"
                 >
-                  <span>📞 Call: 99941 00905 / 94427 01264</span>
+                  <Phone className="w-4 h-4 text-white shrink-0" />
+                  <span>Call: 99941 00905 / 94427 01264</span>
                 </a>
                 <a
                   href="https://wa.me/919994100905?text=Hi%20Sri%20Natchiyar%20Crackers%2C%20I%20would%20like%20to%20order%20crackers"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-2.5 px-4 rounded-md bg-[#FEF9C3] border border-[#FDE047] text-[#073822] font-bold text-center flex items-center justify-center gap-2"
+                  className="py-2.5 px-4 rounded-md bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-center flex items-center justify-center gap-2"
                 >
-                  <svg className="w-4 h-4 text-[#CA8A04]" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12.031 2C6.495 2 2 6.494 2 12.029c0 1.942.553 3.754 1.513 5.293L2 22l4.832-1.472a10.02 10.02 0 0 0 5.199 1.501h.005c5.533 0 10.029-4.494 10.029-10.029A10.03 10.03 0 0 0 12.031 2zm5.879 14.288c-.246.691-1.229 1.326-1.72 1.385-.458.056-1.045.081-3.32-.861-2.678-1.107-4.417-3.83-4.551-4.009-.133-.18-1.085-1.444-1.085-2.754 0-1.31.688-1.954.933-2.221.246-.267.537-.333.716-.333.18 0 .36 0 .518.01.168.01.393-.064.615.469.229.549.78 1.905.849 2.044.068.14.114.305.023.486-.091.18-.137.293-.272.451-.137.158-.288.353-.411.474-.137.135-.28.283-.121.556.16.273.71 1.171 1.523 1.895 1.047.933 1.93 1.223 2.203 1.358.273.136.434.114.595-.069.161-.183.688-.8.871-1.074.183-.273.366-.228.614-.137.248.091 1.57.74 1.838.875.268.136.447.203.513.317.066.114.066.66-.18 1.351z"/>
                   </svg>
                   <span>Chat on WhatsApp: +91 99941 00905</span>
@@ -410,6 +413,7 @@ const Navbar = ({ onOpenSearch }) => {
       </AnimatePresence>
     </header>
   );
+
 };
 
 export default Navbar;

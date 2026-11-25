@@ -116,7 +116,7 @@ const Gallery = () => {
               onClick={() => setFilter(tab.id)}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                 filter === tab.id
-                  ? 'bg-[#0D5C3A] text-yellow-300 border border-[#0D5C3A] shadow-md'
+                  ? 'bg-[#0D5C3A] text-white border border-[#0D5C3A] shadow-md'
                   : 'bg-white hover:bg-emerald-50 text-gray-700 border border-emerald-100 shadow-sm'
               }`}
             >
@@ -182,7 +182,7 @@ const Gallery = () => {
             {/* Prev Button */}
             <button
               onClick={() => setLightboxIndex((lightboxIndex - 1 + filteredPhotos.length) % filteredPhotos.length)}
-              className="absolute left-4 sm:left-8 p-3.5 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-[#073822] text-white transition-colors z-20 cursor-pointer"
+              className="absolute left-4 sm:left-8 p-3.5 rounded-full bg-white/10 hover:bg-emerald-600 hover:text-white text-white transition-colors z-20 cursor-pointer"
               aria-label="Previous Photo"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -191,7 +191,7 @@ const Gallery = () => {
             {/* Next Button */}
             <button
               onClick={() => setLightboxIndex((lightboxIndex + 1) % filteredPhotos.length)}
-              className="absolute right-4 sm:right-8 p-3.5 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-[#073822] text-white transition-colors z-20 cursor-pointer"
+              className="absolute right-4 sm:right-8 p-3.5 rounded-full bg-white/10 hover:bg-emerald-600 hover:text-white text-white transition-colors z-20 cursor-pointer"
               aria-label="Next Photo"
             >
               <ChevronRight className="w-6 h-6" />

@@ -307,7 +307,7 @@ const Hero = () => {
 
                   <Link
                     to={card.link}
-                    className="w-fit px-4 py-2 text-xs font-bold rounded-xl bg-yellow-400 hover:bg-yellow-300 text-[#073822] shadow-sm hover:shadow group-hover:scale-105 inline-flex items-center gap-1.5 transition-all"
+                    className="w-fit px-4 py-2 text-xs font-bold rounded-xl bg-[#0D5C3A] hover:bg-[#073822] text-white shadow-sm hover:shadow group-hover:scale-105 inline-flex items-center gap-1.5 transition-all"
                   >
                     <span>{card.buttonText}</span>
                     <ChevronRight className="w-3.5 h-3.5 stroke-[2.5]" />

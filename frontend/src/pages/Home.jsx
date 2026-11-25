@@ -338,18 +338,18 @@ const Home = () => {
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   to="/products"
-                  className="px-6 sm:px-7 py-3 rounded-lg bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300 font-black text-xs sm:text-sm inline-flex items-center gap-2 shadow-md transition-all active:scale-95"
+                  className="px-6 sm:px-7 py-3 rounded-lg bg-[#0D5C3A] hover:bg-[#073822] text-white font-bold text-xs sm:text-sm inline-flex items-center gap-2 shadow-md transition-all active:scale-95"
                 >
                   <span>Explore Collections</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 text-white" />
                 </Link>
 
                 <Link
                   to="/wholesale"
-                  className="px-6 sm:px-7 py-3 rounded-lg bg-white hover:bg-emerald-50 text-[#0D5C3A] border border-yellow-500 font-bold text-xs sm:text-sm inline-flex items-center gap-2 shadow-2xs hover:border-[#0D5C3A] transition-all"
+                  className="px-6 sm:px-7 py-3 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white border border-emerald-600 font-bold text-xs sm:text-sm inline-flex items-center gap-2 shadow-2xs transition-all"
                 >
                   <span>Download Price List</span>
-                  <Download className="w-4 h-4 text-yellow-600" />
+                  <Download className="w-4 h-4 text-white" />
                 </Link>
               </div>
             </div>
@@ -511,7 +511,7 @@ const Home = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-yellow-300 font-bold text-sm tracking-widest uppercase shadow-md shadow-[#0D5C3A]/25 border border-yellow-400/40 transition-all active:scale-[0.99] disabled:opacity-50 cursor-pointer"
+                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-white font-bold text-sm tracking-widest uppercase shadow-md shadow-[#0D5C3A]/25 border border-emerald-500/40 transition-all active:scale-[0.99] disabled:opacity-50 cursor-pointer"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Enquiry • நேரடி விலை அறிய'}
                   </button>

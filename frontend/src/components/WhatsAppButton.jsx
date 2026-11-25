@@ -36,7 +36,7 @@ const WhatsAppButton = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2.5 inline-block w-full text-center py-2 rounded-xl bg-yellow-400 hover:bg-yellow-300 font-black text-[#073822] transition-colors shadow-md"
+            className="mt-2.5 inline-block w-full text-center py-2 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] font-bold text-white transition-colors shadow-md"
           >
             Start WhatsApp Chat
           </a>

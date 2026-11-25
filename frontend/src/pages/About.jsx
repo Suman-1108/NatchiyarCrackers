@@ -172,14 +172,14 @@ const About = () => {
             Explore our complete Sivakasi catalogue or call us directly at <strong>99941 00905</strong> for quick price estimates.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link to="/products" className="bg-yellow-400 hover:bg-yellow-300 text-[#073822] font-black px-8 py-3.5 rounded-xl text-sm shadow-xl transition-all">
+            <Link to="/products" className="bg-[#0D5C3A] hover:bg-[#073822] text-white font-bold px-8 py-3.5 rounded-xl text-sm shadow-xl border border-emerald-500/40 transition-all">
               Explore Our Products
             </Link>
             <a
               href="https://wa.me/919994100905?text=Hi%20Sri%20Natchiyar%20Crackers"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 rounded-xl text-sm font-bold bg-white/10 hover:bg-white/20 text-yellow-200 border border-yellow-400/40 transition-colors"
+              className="px-8 py-3.5 rounded-xl text-sm font-bold bg-[#25D366] hover:bg-[#1EBE5D] text-white border border-[#25D366] transition-colors shadow-md"
             >
               WhatsApp Us: 99941 00905
             </a>

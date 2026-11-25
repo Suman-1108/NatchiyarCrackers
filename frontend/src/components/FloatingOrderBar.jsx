@@ -81,7 +81,7 @@ const FloatingOrderBar = () => {
           <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-end">
             <button
               onClick={clearCart}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors border border-gray-200"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors border border-red-600"
             >
               <Trash2 className="w-3.5 h-3.5" />
               <span>Clear All</span>
@@ -91,14 +91,14 @@ const FloatingOrderBar = () => {
               href={`https://wa.me/919994100905?text=${getWhatsAppOrderMessage()}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-emerald-600 bg-emerald-50 text-[#0D5C3A] hover:bg-emerald-100 font-bold text-xs transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-emerald-600 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-colors whitespace-nowrap shadow-xs"
             >
               <span>WhatsApp Estimate</span>
             </a>
 
             <Link
               to="/cart"
-              className="flex-1 sm:flex-initial bg-[#0D5C3A] hover:bg-[#073822] text-yellow-300 px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 whitespace-nowrap"
+              className="flex-1 sm:flex-initial bg-[#0D5C3A] hover:bg-[#073822] text-white px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 whitespace-nowrap"
             >
               <span>View Cart &amp; Order</span>
               <ArrowRight className="w-4 h-4" />

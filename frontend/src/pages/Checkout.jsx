@@ -218,7 +218,7 @@ const Checkout = () => {
 
                 <Link
                   to="/"
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-gray-300 hover:bg-gray-50 font-bold text-sm text-gray-700 transition-colors"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-gray-700 bg-gray-700 hover:bg-gray-800 font-bold text-sm text-white transition-colors"
                 >
                   Return to Home
                 </Link>
@@ -454,9 +454,9 @@ const Checkout = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-yellow-300 text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/20 border border-yellow-400/40 transition-all cursor-pointer disabled:opacity-50"
+                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0D5C3A] via-[#15803D] to-[#0D5C3A] hover:from-[#15803D] hover:to-[#073822] text-white text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl shadow-[#0D5C3A]/20 border border-emerald-500/40 transition-all cursor-pointer disabled:opacity-50"
                   >
-                    <Lock className="w-4 h-4 text-yellow-300" />
+                    <Lock className="w-4 h-4 text-white" />
                     <span>{isSubmitting ? 'Registering Booking...' : 'Submit Transport Order Booking'}</span>
                   </button>
 
@@ -467,7 +467,7 @@ const Checkout = () => {
                       href={`https://wa.me/919994100905?text=${generateWhatsAppOrderText()}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-600 text-emerald-800 hover:text-white border border-emerald-300 text-xs font-bold transition-all"
+                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white border border-[#25D366] text-xs font-bold transition-all shadow-xs"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span>Book on WhatsApp: 99941 00905</span>

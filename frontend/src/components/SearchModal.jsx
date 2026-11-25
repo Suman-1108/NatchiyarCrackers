@@ -85,7 +85,7 @@ const SearchModal = ({ isOpen, onClose }) => {
                   <button
                     key={tag}
                     onClick={() => setQuery(tag)}
-                    className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-yellow-400/20 text-emerald-100 hover:text-yellow-300 text-xs font-bold border border-yellow-400/20 transition-colors"
+                    className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white hover:text-white text-xs font-bold border border-white/20 transition-colors"
                   >
                     {tag}
                   </button>
