@@ -174,6 +174,9 @@ const Footer = () => {
             <Link to="/wholesale" className="hover:text-[#0D5C3A] transition-colors">
               B2B Trade Portal
             </Link>
+            <Link to="/admin" className="hover:text-[#0D5C3A] text-gray-400 transition-colors">
+              Admin
+            </Link>
           </div>
         </div>
       </div>

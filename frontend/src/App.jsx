@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { CartProvider } from './context/CartContext';
+import { AdminAuthProvider } from './context/AdminAuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -9,11 +10,10 @@ import FloatingOrderBar from './components/FloatingOrderBar';
 import SearchModal from './components/SearchModal';
 import SplashScreen from './components/SplashScreen';
 
-// Pages
+// Storefront Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
-import ProductDetails from './pages/ProductDetails';
 import Gallery from './pages/Gallery';
 import Wholesale from './pages/Wholesale';
 import Contact from './pages/Contact';
@@ -21,6 +21,11 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+
+// Admin Console Pages & Route Protection
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminProtectedRoute from './components/admin/AdminProtectedRoute';
 
 // Helper component to scroll to top on route navigation
 const ScrollToTop = () => {
@@ -34,79 +39,108 @@ const ScrollToTop = () => {
 function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
+  const location = useLocation();
+
+  const isAdminRoute = location.pathname.startsWith('/admin');
 
   return (
-    <CartProvider>
-      {/* Branded Splash Screen with Zoom-In Logo Animation */}
-      {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+    <AdminAuthProvider>
+      <CartProvider>
+        {/* Branded Splash Screen (Only on Storefront) */}
+        {showSplash && !isAdminRoute && (
+          <SplashScreen onComplete={() => setShowSplash(false)} />
+        )}
 
-      <div className="flex flex-col min-h-screen bg-[#FAF8F5] text-[#18181B] selection:bg-yellow-400 selection:text-[#073822]">
-        <ScrollToTop />
-        <Toaster
-          position="bottom-center"
-          toastOptions={{
-            duration: 3500,
-            style: {
-              background: '#FFFFFF',
-              color: '#18181B',
-              border: '1px solid #E2E8F0',
-              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.12)',
-              fontSize: '13px',
-              fontWeight: 600,
-              borderRadius: '12px'
-            },
-            success: {
-              iconTheme: {
-                primary: '#16A34A',
-                secondary: '#FFFFFF',
+        <div className="flex flex-col min-h-screen bg-[#FAF8F5] text-[#18181B] selection:bg-yellow-400 selection:text-[#073822]">
+          <ScrollToTop />
+          <Toaster
+            position="bottom-center"
+            toastOptions={{
+              duration: 3500,
+              style: {
+                background: '#FFFFFF',
+                color: '#18181B',
+                border: '1px solid #E2E8F0',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.12)',
+                fontSize: '13px',
+                fontWeight: 600,
+                borderRadius: '12px'
               },
-            },
-            error: {
-              iconTheme: {
-                primary: '#D81C28',
-                secondary: '#FFFFFF',
+              success: {
+                iconTheme: {
+                  primary: '#16A34A',
+                  secondary: '#FFFFFF',
+                },
               },
-            },
-          }}
-        />
+              error: {
+                iconTheme: {
+                  primary: '#D81C28',
+                  secondary: '#FFFFFF',
+                },
+              },
+            }}
+          />
 
-        {/* Global Navigation */}
-        <Navbar onOpenSearch={() => setIsSearchOpen(true)} />
+          {/* Customer Global Navigation (Hidden on Admin Routes) */}
+          {!isAdminRoute && <Navbar onOpenSearch={() => setIsSearchOpen(true)} />}
 
-        {/* Live Search Modal */}
-        <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+          {/* Customer Live Search Modal */}
+          {!isAdminRoute && (
+            <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+          )}
 
-        {/* Floating WhatsApp Quick Connect */}
-        <WhatsAppButton />
+          {/* Customer Floating WhatsApp Quick Connect */}
+          {!isAdminRoute && <WhatsAppButton />}
 
-        {/* Global Floating Order Summary Bar (triggers on any item addition) */}
-        <FloatingOrderBar />
+          {/* Customer Global Floating Order Summary Bar */}
+          {!isAdminRoute && <FloatingOrderBar />}
 
-        {/* Main Routed Page Content */}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<Navigate to="/products" replace />} />
-            <Route path="/gallery" element={<Navigate to="/products" replace />} />
-            <Route path="/wholesale" element={<Wholesale />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-conditions" element={<TermsConditions />} />
-            {/* Fallback to Home */}
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </main>
+          {/* Main Routed Page Content */}
+          <main className="flex-grow">
+            <Routes>
+              {/* Storefront Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/:id" element={<Navigate to="/products" replace />} />
+              <Route path="/gallery" element={<Navigate to="/products" replace />} />
+              <Route path="/wholesale" element={<Wholesale />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-conditions" element={<TermsConditions />} />
 
-        {/* Global Footer */}
-        <Footer />
-      </div>
-    </CartProvider>
+              {/* Admin Console Routes */}
+              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route
+                path="/admin"
+                element={
+                  <AdminProtectedRoute>
+                    <AdminDashboard />
+                  </AdminProtectedRoute>
+                }
+              />
+              <Route
+                path="/admin/*"
+                element={
+                  <AdminProtectedRoute>
+                    <AdminDashboard />
+                  </AdminProtectedRoute>
+                }
+              />
+
+              {/* Fallback to Home */}
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </main>
+
+          {/* Customer Global Footer (Hidden on Admin Routes) */}
+          {!isAdminRoute && <Footer />}
+        </div>
+      </CartProvider>
+    </AdminAuthProvider>
   );
 }
 
 export default App;
-

@@ -14,6 +14,12 @@ export const config = {
   nodeEnv: process.env.NODE_ENV || 'development',
   frontendUrl: process.env.FRONTEND_URL || 'http://localhost:5173',
   mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/natchiyar_crackers',
+  jwtSecret: process.env.JWT_SECRET || 'natchiyar_crackers_jwt_secret_key_2026',
+  admin: {
+    username: process.env.ADMIN_USERNAME || 'admin',
+    password: process.env.ADMIN_PASSWORD || 'admin@natchiyar2026',
+    email: process.env.ADMIN_EMAIL || 'hellosuman29@gmail.com'
+  },
   store: {
     name: 'SRI NATCHIYAR CRACKERS',
     tamilName: 'ஸ்ரீ நாச்சியார் பட்டாசு கடை',

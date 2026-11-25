@@ -56,3 +56,18 @@ export const getEnquiries = async (req, res) => {
     res.status(500).json({ success: false, message: 'Error fetching enquiries', error: error.message });
   }
 };
+
+export const deleteEnquiry = async (req, res) => {
+  try {
+    const id = req.params.id;
+    if (isDbConnected()) {
+      await Enquiry.findOneAndDelete({ $or: [{ _id: id }, { id }] });
+      return res.json({ success: true, message: 'Enquiry deleted' });
+    }
+    const idx = enquiriesStore.findIndex(e => e.id === id || e._id === id);
+    if (idx !== -1) enquiriesStore.splice(idx, 1);
+    res.json({ success: true, message: 'Enquiry deleted' });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to delete enquiry', error: error.message });
+  }
+};

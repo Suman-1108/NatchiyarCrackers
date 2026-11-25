@@ -82,12 +82,124 @@ export const createOrderIntent = async (req, res) => {
 
 export const getOrders = async (req, res) => {
   try {
+    const { status, search } = req.query;
+
     if (isDbConnected()) {
-      const orders = await Order.find().sort({ createdAt: -1 });
+      const query = {};
+      if (status && status !== 'ALL') {
+        query.status = status;
+      }
+      if (search) {
+        query.$or = [
+          { orderRef: { $regex: search, $options: 'i' } },
+          { 'customer.fullName': { $regex: search, $options: 'i' } },
+          { 'customer.phone': { $regex: search, $options: 'i' } },
+          { 'customer.district': { $regex: search, $options: 'i' } }
+        ];
+      }
+
+      const orders = await Order.find(query).sort({ createdAt: -1 });
       return res.json({ success: true, count: orders.length, data: orders });
     }
-    res.json({ success: true, count: ordersStore.length, data: ordersStore });
+
+    let filtered = [...ordersStore];
+    if (status && status !== 'ALL') {
+      filtered = filtered.filter(o => o.status === status);
+    }
+    if (search) {
+      const q = search.toLowerCase();
+      filtered = filtered.filter(o =>
+        o.orderRef?.toLowerCase().includes(q) ||
+        o.customer?.fullName?.toLowerCase().includes(q) ||
+        o.customer?.phone?.includes(q)
+      );
+    }
+
+    res.json({ success: true, count: filtered.length, data: filtered });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Error fetching orders', error: error.message });
+  }
+};
+
+export const getOrderById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    if (isDbConnected()) {
+      const order = await Order.findOne({ $or: [{ _id: id }, { orderRef: id }] });
+      if (!order) {
+        return res.status(404).json({ success: false, message: 'Order not found' });
+      }
+      return res.json({ success: true, data: order });
+    }
+
+    const order = ordersStore.find(o => o.orderRef === id || o._id === id);
+    if (!order) {
+      return res.status(404).json({ success: false, message: 'Order not found' });
+    }
+    res.json({ success: true, data: order });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Error fetching order', error: error.message });
+  }
+};
+
+export const updateOrderStatus = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const { status, notes } = req.body;
+
+    if (!status) {
+      return res.status(400).json({ success: false, message: 'Status is required' });
+    }
+
+    if (isDbConnected()) {
+      const updateData = { status };
+      if (notes) updateData['customer.notes'] = notes;
+
+      const updated = await Order.findOneAndUpdate(
+        { $or: [{ _id: id }, { orderRef: id }] },
+        updateData,
+        { new: true }
+      );
+
+      if (!updated) {
+        return res.status(404).json({ success: false, message: 'Order not found' });
+      }
+
+      return res.json({ success: true, message: `Order status updated to ${status}`, data: updated });
+    }
+
+    const order = ordersStore.find(o => o.orderRef === id || o._id === id);
+    if (order) {
+      order.status = status;
+      return res.json({ success: true, message: `Order status updated to ${status}`, data: order });
+    }
+
+    res.status(404).json({ success: false, message: 'Order not found' });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to update order status', error: error.message });
+  }
+};
+
+export const deleteOrder = async (req, res) => {
+  try {
+    const id = req.params.id;
+
+    if (isDbConnected()) {
+      const deleted = await Order.findOneAndDelete({ $or: [{ _id: id }, { orderRef: id }] });
+      if (!deleted) {
+        return res.status(404).json({ success: false, message: 'Order not found' });
+      }
+      return res.json({ success: true, message: 'Order deleted successfully' });
+    }
+
+    const index = ordersStore.findIndex(o => o.orderRef === id || o._id === id);
+    if (index !== -1) {
+      ordersStore.splice(index, 1);
+      return res.json({ success: true, message: 'Order deleted successfully' });
+    }
+
+    res.status(404).json({ success: false, message: 'Order not found' });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to delete order', error: error.message });
   }
 };

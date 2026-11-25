@@ -8,6 +8,7 @@ import productRoutes from './routes/productRoutes.js';
 import enquiryRoutes from './routes/enquiryRoutes.js';
 import wholesaleRoutes from './routes/wholesaleRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
 import { notFound, errorHandler } from './middleware/errorHandler.js';
 import { getCategories } from './controllers/productController.js';
 
@@ -43,6 +44,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/enquiries', enquiryRoutes);
 app.use('/api/wholesale-enquiries', wholesaleRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Error handling middleware
 app.use(notFound);
@@ -60,6 +62,7 @@ const startServer = async () => {
     console.log(`🎆 NATCHIYAR CRACKERS API running on port ${PORT} [${config.nodeEnv}]`);
     console.log(`🍃 Database Status: ${isDbConnected() ? 'Connected to MongoDB' : 'In-memory fallback'}`);
     console.log(`📧 Email SMTP: ${config.smtp.user}`);
+    console.log(`🛡️ Admin Portal: /api/admin/login`);
     console.log(`📍 Sivakasi Headquarters: +91 ${config.store.phone}`);
   });
 };

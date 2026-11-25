@@ -25,7 +25,7 @@ export const createWholesaleEnquiry = async (req, res) => {
     }
 
     const record = {
-      quoteRef: `PM-B2B-${Date.now().toString().slice(-6)}`,
+      quoteRef: `SNC-B2B-${Date.now().toString().slice(-6)}`,
       businessName,
       contactPerson,
       phone,
@@ -71,5 +71,20 @@ export const getWholesaleEnquiries = async (req, res) => {
     res.json({ success: true, count: wholesaleStore.length, data: wholesaleStore });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Server error fetching wholesale enquiries', error: error.message });
+  }
+};
+
+export const deleteWholesaleEnquiry = async (req, res) => {
+  try {
+    const id = req.params.id;
+    if (isDbConnected()) {
+      await Wholesale.findOneAndDelete({ $or: [{ _id: id }, { quoteRef: id }] });
+      return res.json({ success: true, message: 'Wholesale enquiry deleted' });
+    }
+    const idx = wholesaleStore.findIndex(w => w.quoteRef === id || w._id === id);
+    if (idx !== -1) wholesaleStore.splice(idx, 1);
+    res.json({ success: true, message: 'Wholesale enquiry deleted' });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to delete wholesale enquiry', error: error.message });
   }
 };

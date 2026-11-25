@@ -87,6 +87,125 @@ export const getProductById = async (req, res) => {
   }
 };
 
+// Admin: Create Product
+export const createProduct = async (req, res) => {
+  try {
+    const {
+      name,
+      category,
+      categoryName,
+      packSize,
+      mrp,
+      price,
+      availability,
+      stock,
+      featured,
+      tag,
+      description
+    } = req.body;
+
+    if (!name || !mrp || !price) {
+      return res.status(400).json({ success: false, message: 'Product Name, MRP, and Selling Price are required.' });
+    }
+
+    const mrpNum = Number(mrp);
+    const priceNum = Number(price);
+    const discount = mrpNum > priceNum ? Math.round(((mrpNum - priceNum) / mrpNum) * 100) : 0;
+    
+    // Auto generate id & serial no
+    let nextNo = 100;
+    if (isDbConnected()) {
+      const highest = await Product.findOne().sort({ no: -1 }).select('no').lean();
+      if (highest && highest.no) {
+        nextNo = highest.no + 1;
+      }
+    }
+    const cleanId = req.body.id || `snc-${Date.now().toString().slice(-6)}`;
+
+    const newProductData = {
+      id: cleanId,
+      no: nextNo,
+      name,
+      category: category || 'sparklers',
+      categoryName: categoryName || 'Sparklers',
+      packSize: packSize || '1 Box',
+      mrp: mrpNum,
+      price: priceNum,
+      discount,
+      availability: availability || 'In Stock',
+      stock: stock !== undefined ? Number(stock) : 100,
+      featured: Boolean(featured),
+      tag: tag || '',
+      description: description || ''
+    };
+
+    if (isDbConnected()) {
+      const created = await Product.create(newProductData);
+      return res.status(201).json({ success: true, message: 'Product added successfully!', data: created });
+    }
+
+    res.status(201).json({ success: true, message: 'Product registered in offline mode', data: newProductData });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to create product', error: error.message });
+  }
+};
+
+// Admin: Update Product
+export const updateProduct = async (req, res) => {
+  try {
+    const productId = req.params.id;
+    const updates = { ...req.body };
+
+    if (updates.mrp && updates.price) {
+      const mrpNum = Number(updates.mrp);
+      const priceNum = Number(updates.price);
+      updates.discount = mrpNum > priceNum ? Math.round(((mrpNum - priceNum) / mrpNum) * 100) : 0;
+    }
+
+    if (isDbConnected()) {
+      const updated = await Product.findOneAndUpdate(
+        { $or: [{ id: productId }, { _id: productId }] },
+        updates,
+        { new: true }
+      );
+
+      if (!updated) {
+        return res.status(404).json({ success: false, message: 'Product not found to update.' });
+      }
+
+      return res.json({ success: true, message: 'Product updated successfully!', data: updated });
+    }
+
+    res.json({ success: true, message: 'Product updated (offline mode)', data: updates });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to update product', error: error.message });
+  }
+};
+
+// Admin: Delete Product
+export const deleteProduct = async (req, res) => {
+  try {
+    const productId = req.params.id;
+
+    if (isDbConnected()) {
+      const deleted = await Product.findOneAndDelete({
+        $or: [{ id: productId }, { _id: productId }]
+      });
+
+      if (!deleted) {
+        return res.status(404).json({ success: false, message: 'Product not found.' });
+      }
+
+      return res.json({ success: true, message: 'Product deleted successfully!' });
+    }
+
+    res.json({ success: true, message: 'Product deleted (offline mode).' });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to delete product', error: error.message });
+  }
+};
+
+// Categories
 export const getCategories = async (req, res) => {
   try {
     if (isDbConnected()) {
@@ -100,5 +219,65 @@ export const getCategories = async (req, res) => {
     res.json({ success: true, data: categories });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Failed to fetch categories', error: error.message });
+  }
+};
+
+// Admin: Create Category
+export const createCategory = async (req, res) => {
+  try {
+    const { name, slug, tagline, description } = req.body;
+    if (!name || !slug) {
+      return res.status(400).json({ success: false, message: 'Category Name and Slug are required.' });
+    }
+
+    const catData = {
+      id: slug,
+      name,
+      slug,
+      tagline: tagline || '',
+      description: description || '',
+      count: 0
+    };
+
+    if (isDbConnected()) {
+      const created = await Category.create(catData);
+      return res.status(201).json({ success: true, message: 'Category created!', data: created });
+    }
+
+    res.status(201).json({ success: true, message: 'Category created (offline)', data: catData });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to create category', error: error.message });
+  }
+};
+
+// Admin: Update Category
+export const updateCategory = async (req, res) => {
+  try {
+    const catId = req.params.id;
+    if (isDbConnected()) {
+      const updated = await Category.findOneAndUpdate(
+        { $or: [{ id: catId }, { _id: catId }] },
+        req.body,
+        { new: true }
+      );
+      return res.json({ success: true, message: 'Category updated!', data: updated });
+    }
+    res.json({ success: true, message: 'Category updated (offline)' });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to update category', error: error.message });
+  }
+};
+
+// Admin: Delete Category
+export const deleteCategory = async (req, res) => {
+  try {
+    const catId = req.params.id;
+    if (isDbConnected()) {
+      await Category.findOneAndDelete({ $or: [{ id: catId }, { _id: catId }] });
+      return res.json({ success: true, message: 'Category deleted!' });
+    }
+    res.json({ success: true, message: 'Category deleted (offline)' });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to delete category', error: error.message });
   }
 };
