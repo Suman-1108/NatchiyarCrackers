@@ -277,7 +277,7 @@ const Products = () => {
                           setSearchParams({});
                           setCurrentPage(1);
                         }}
-                        className="mt-4 px-4 py-2 rounded-xl text-xs font-bold bg-[#0D5C3A] text-yellow-300 hover:bg-[#073822] transition-colors"
+                        className="mt-4 px-4 py-2 rounded-xl text-xs font-bold bg-[#0D5C3A] text-white hover:bg-[#073822] transition-colors"
                       >
                         Reset Filters
                       </button>

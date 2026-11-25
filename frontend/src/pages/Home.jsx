@@ -7,8 +7,8 @@ import PopularProductsTable from '../components/PopularProductsTable';
 import { getFeaturedProducts } from '../data/products';
 import apiService from '../services/api';
 import toast from 'react-hot-toast';
-import {
-  Sparkles,
+import { 
+  Sparkles, 
   ShieldCheck,
   Truck,
   ArrowRight,

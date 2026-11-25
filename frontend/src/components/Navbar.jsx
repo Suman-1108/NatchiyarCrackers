@@ -156,7 +156,7 @@ const Navbar = ({ onOpenSearch }) => {
               <span className="text-yellow-400">•</span>
               <span className="text-white">ஸ்ரீ நாச்சியார் பட்டாசு கடை</span>
               <span className="text-yellow-400">•</span>
-              <span className="text-yellow-200 font-bold">சிவகாசி கம்பெனியின் நேரடி விற்பனை</span>
+              <span className="text-white font-bold">சிவகாசி கம்பெனியின் நேரடி விற்பனை</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
@@ -164,7 +164,7 @@ const Navbar = ({ onOpenSearch }) => {
               <span className="text-sm sm:text-base leading-none">🚚</span>
               <span className="text-white">Direct Sivakasi Factory Wholesale</span>
               <span className="text-yellow-400">•</span>
-              <span className="text-yellow-300 font-black uppercase tracking-wider bg-black/40 px-1.5 sm:px-2 py-0.5 rounded border border-yellow-400/50">
+              <span className="text-white font-black uppercase tracking-wider bg-black/40 px-1.5 sm:px-2 py-0.5 rounded border border-yellow-400/50">
                 Wholesale &amp; Retail Orders
               </span>
             </span>
@@ -179,7 +179,7 @@ const Navbar = ({ onOpenSearch }) => {
               <span className="text-yellow-400">•</span>
               <Phone className="w-3.5 h-3.5 text-white shrink-0" />
               <span className="text-white">Direct Phone:</span>
-              <span className="text-yellow-300 font-black">99941 00905 / 94427 01264 / 93637 79531</span>
+              <span className="text-white font-black">99941 00905 / 94427 01264 / 93637 79531</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
@@ -195,7 +195,7 @@ const Navbar = ({ onOpenSearch }) => {
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-400 shadow-[0_0_8px_#FACC15] inline-block"></span>
               <span className="text-white">ஸ்ரீ நாச்சியார் பட்டாசு கடை</span>
               <span className="text-yellow-400">•</span>
-              <span className="text-yellow-200 font-bold">சிவகாசி கம்பெனியின் நேரடி விற்பனை</span>
+              <span className="text-white font-bold">சிவகாசி கம்பெனியின் நேரடி விற்பனை</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">
@@ -203,7 +203,7 @@ const Navbar = ({ onOpenSearch }) => {
               <span className="text-sm sm:text-base leading-none">🚚</span>
               <span className="text-white">Direct Sivakasi Factory Wholesale</span>
               <span className="text-yellow-400">•</span>
-              <span className="text-yellow-300 font-black uppercase tracking-wider bg-black/40 px-1.5 sm:px-2 py-0.5 rounded border border-yellow-400/50">
+              <span className="text-white font-black uppercase tracking-wider bg-black/40 px-1.5 sm:px-2 py-0.5 rounded border border-yellow-400/50">
                 Wholesale &amp; Retail Orders
               </span>
             </span>
@@ -218,7 +218,7 @@ const Navbar = ({ onOpenSearch }) => {
               <span className="text-yellow-400">•</span>
               <Phone className="w-3.5 h-3.5 text-white shrink-0" />
               <span className="text-white">Direct Phone:</span>
-              <span className="text-yellow-300 font-black">99941 00905 / 94427 01264 / 93637 79531</span>
+              <span className="text-white font-black">99941 00905 / 94427 01264 / 93637 79531</span>
             </span>
 
             <span className="flex items-center gap-1.5 sm:gap-2">

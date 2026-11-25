@@ -134,7 +134,7 @@ const ProductCard = ({ product, viewMode = 'card', index = 1 }) => {
       <div>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <span className="w-8 h-8 rounded-lg bg-gray-900 text-yellow-300 text-xs font-black flex items-center justify-center font-mono">
+            <span className="w-8 h-8 rounded-lg bg-gray-900 text-white text-xs font-black flex items-center justify-center font-mono">
               #{product.no || product.id?.slice(0, 3)}
             </span>
             <span className="text-[11px] font-bold uppercase tracking-wider text-[#0D5C3A] bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">

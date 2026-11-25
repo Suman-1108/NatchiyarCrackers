@@ -33,7 +33,7 @@ const FloatingOrderBar = () => {
             <div className="flex items-center gap-3">
               <div className="relative p-2.5 bg-emerald-50 border border-emerald-200 rounded-xl text-[#0D5C3A] shrink-0">
                 <ShoppingBag className="w-5 h-5" />
-                <span className="absolute -top-1.5 -right-1.5 bg-[#0D5C3A] text-yellow-300 text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
+                <span className="absolute -top-1.5 -right-1.5 bg-[#0D5C3A] text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
                   {totalItemsCount}
                 </span>
               </div>
