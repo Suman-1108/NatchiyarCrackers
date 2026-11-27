@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { ShoppingBag, Menu, X, Search, Phone, ShieldCheck } from 'lucide-react';
+import { ShoppingBag, Menu, X, Search, Phone } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../assets/logo/natchiyar_logo.png';
@@ -26,8 +26,7 @@ const Navbar = ({ onOpenSearch }) => {
     { name: 'Collections', path: '/products' },
     { name: 'Products', path: '/products' },
     { name: 'Gallery', path: '/products' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Admin', path: '/admin' }
+    { name: 'Contact', path: '/contact' }
   ];
 
   // Authentic Sivakasi Firework Category Line-Draw Icons
@@ -326,16 +325,6 @@ const Navbar = ({ onOpenSearch }) => {
               <span>99941 00905</span>
             </a>
 
-            {/* Desktop Admin Portal Quick Link */}
-            <Link
-              to="/admin"
-              aria-label="Admin Control Portal"
-              className="h-8 sm:h-10 px-2.5 sm:px-3 rounded-md bg-[#FAF8F5] hover:bg-emerald-50 border border-emerald-200 text-[#0D5C3A] font-bold text-xs sm:text-sm hidden lg:flex items-center gap-1.5 transition-colors shadow-2xs"
-            >
-              <ShieldCheck className="w-3.5 h-3.5 text-[#0D5C3A] shrink-0" />
-              <span>Admin</span>
-            </Link>
-
             {/* Mobile Hamburger Toggle */}
             <button
               type="button"
@@ -419,14 +408,6 @@ const Navbar = ({ onOpenSearch }) => {
               </svg>
                   <span>Chat on WhatsApp: +91 99941 00905</span>
                 </a>
-                <Link
-                  to="/admin"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="py-2.5 px-4 rounded-md bg-[#062D1B] border border-emerald-600/50 text-white font-bold text-center flex items-center justify-center gap-2 hover:bg-[#0D5C3A] transition-colors"
-                >
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Admin Control Portal</span>
-                </Link>
               </div>
             </div>
           </motion.div>

@@ -41,7 +41,7 @@ function App() {
   const [showSplash, setShowSplash] = useState(true);
   const location = useLocation();
 
-  const isAdminRoute = location.pathname.startsWith('/admin');
+  const isAdminRoute = location.pathname.startsWith('/portal/admin') || location.pathname.startsWith('/admin');
 
   return (
     <AdminAuthProvider>
@@ -111,10 +111,10 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-conditions" element={<TermsConditions />} />
 
-              {/* Admin Console Routes */}
-              <Route path="/admin/login" element={<AdminLogin />} />
+              {/* Private Admin Portal Routes */}
+              <Route path="/portal/admin/login" element={<AdminLogin />} />
               <Route
-                path="/admin"
+                path="/portal/admin/dashboard"
                 element={
                   <AdminProtectedRoute>
                     <AdminDashboard />
@@ -122,13 +122,22 @@ function App() {
                 }
               />
               <Route
-                path="/admin/*"
+                path="/portal/admin"
+                element={<Navigate to="/portal/admin/dashboard" replace />}
+              />
+              <Route
+                path="/portal/admin/*"
                 element={
                   <AdminProtectedRoute>
                     <AdminDashboard />
                   </AdminProtectedRoute>
                 }
               />
+
+              {/* Legacy /admin redirects */}
+              <Route path="/admin/login" element={<Navigate to="/portal/admin/login" replace />} />
+              <Route path="/admin" element={<Navigate to="/portal/admin/dashboard" replace />} />
+              <Route path="/admin/*" element={<Navigate to="/portal/admin/dashboard" replace />} />
 
               {/* Fallback to Home */}
               <Route path="*" element={<Home />} />

@@ -26,10 +26,13 @@ adminClient.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response && error.response.status === 401) {
-      if (window.location.pathname.startsWith('/admin') && window.location.pathname !== '/admin/login') {
+      if (
+        (window.location.pathname.startsWith('/portal/admin') || window.location.pathname.startsWith('/admin')) &&
+        !window.location.pathname.includes('/login')
+      ) {
         localStorage.removeItem('snc_admin_token');
         localStorage.removeItem('snc_admin_user');
-        window.location.href = '/admin/login?sessionExpired=true';
+        window.location.href = '/portal/admin/login?sessionExpired=true';
       }
     }
     return Promise.reject(error);

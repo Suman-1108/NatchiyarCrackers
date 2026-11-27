@@ -137,7 +137,7 @@ const AdminDashboard = () => {
   const handleLogout = () => {
     logout();
     toast.success('Logged out from admin console');
-    navigate('/admin/login');
+    navigate('/portal/admin/login');
   };
 
   // --- Product Handlers ---

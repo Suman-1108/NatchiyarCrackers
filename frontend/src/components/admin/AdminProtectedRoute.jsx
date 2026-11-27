@@ -19,7 +19,7 @@ const AdminProtectedRoute = ({ children }) => {
   }
 
   if (!isAuthenticated) {
-    return <Navigate to="/admin/login" state={{ from: location }} replace />;
+    return <Navigate to="/portal/admin/login" state={{ from: location }} replace />;
   }
 
   return children;

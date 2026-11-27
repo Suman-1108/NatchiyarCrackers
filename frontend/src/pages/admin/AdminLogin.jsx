@@ -14,10 +14,10 @@ const AdminLogin = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // If already authenticated, redirect to /admin
+  // If already authenticated, redirect to /portal/admin/dashboard
   React.useEffect(() => {
     if (isAuthenticated) {
-      navigate('/admin', { replace: true });
+      navigate('/portal/admin/dashboard', { replace: true });
     }
   }, [isAuthenticated, navigate]);
 
@@ -33,7 +33,7 @@ const AdminLogin = () => {
       const res = await login(username.trim(), password);
       if (res.success) {
         toast.success('Admin authentication verified. Welcome back!');
-        const from = location.state?.from?.pathname || '/admin';
+        const from = location.state?.from?.pathname || '/portal/admin/dashboard';
         navigate(from, { replace: true });
       } else {
         toast.error(res.message || 'Invalid admin credentials');
