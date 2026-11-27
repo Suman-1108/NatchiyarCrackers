@@ -78,6 +78,12 @@ const Footer = () => {
               <li>
                 <Link to="/contact" className="hover:text-[#0D5C3A] transition-colors">Contact Us</Link>
               </li>
+              <li>
+                <Link to="/admin" className="text-[#0D5C3A] font-bold hover:underline transition-colors flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#0D5C3A]" />
+                  <span>Admin Portal</span>
+                </Link>
+              </li>
             </ul>
           </div>
 
