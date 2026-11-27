@@ -5,7 +5,7 @@ import { CartProvider } from './context/CartContext';
 import { AdminAuthProvider } from './context/AdminAuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+import ChatBot from './components/ChatBot';
 import FloatingOrderBar from './components/FloatingOrderBar';
 import SearchModal from './components/SearchModal';
 import SplashScreen from './components/SplashScreen';
@@ -89,8 +89,8 @@ function App() {
             <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
           )}
 
-          {/* Customer Floating WhatsApp Quick Connect */}
-          {!isAdminRoute && <WhatsAppButton />}
+          {/* Customer Floating Fireworks Assistant ChatBot */}
+          {!isAdminRoute && <ChatBot />}
 
           {/* Customer Global Floating Order Summary Bar */}
           {!isAdminRoute && <FloatingOrderBar />}
