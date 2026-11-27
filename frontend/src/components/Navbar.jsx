@@ -300,13 +300,13 @@ const Navbar = ({ onOpenSearch }) => {
               </span>
             </Link>
 
-            {/* Festive Yellow WhatsApp Button */}
+            {/* WhatsApp Button (Hidden on mobile to declutter header, visible on tablet & desktop) */}
             <a
               href="https://wa.me/919994100905?text=Hi%20Sri%20Natchiyar%20Crackers%2C%20I%20would%20like%20to%20order%20crackers"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="h-8 sm:h-10 px-2 sm:px-3.5 sm:py-2 rounded-md bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-colors shadow-2xs"
+              className="h-8 sm:h-10 px-2 sm:px-3.5 sm:py-2 rounded-md bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm hidden sm:flex items-center gap-1.5 transition-colors shadow-2xs"
             >
               <svg className="w-4 h-4 sm:w-4.5 sm:h-4.5 shrink-0 drop-shadow-2xs" viewBox="0 0 32 32">
                 <path fill="#FFFFFF" d="M16 2.5C8.544 2.5 2.5 8.544 2.5 16c0 2.636.75 5.099 2.053 7.185L2.637 29.363l6.398-1.895A13.435 13.435 0 0 0 16 29.5c7.456 0 13.5-6.044 13.5-13.5S23.456 2.5 16 2.5z"/>
