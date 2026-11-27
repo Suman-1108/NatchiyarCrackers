@@ -27,23 +27,23 @@ const FloatingOrderBar = () => {
       }`}
     >
       <div className="bg-white/95 backdrop-blur-md border-t-2 border-[#0D5C3A] shadow-[0_-8px_30px_rgba(0,0,0,0.18)]">
-        <div className="max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 py-3 sm:py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-[1760px] mx-auto px-3.5 sm:px-8 lg:px-12 py-2 sm:py-3.5 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
           {/* Left: Cart items count & Total Amount Calculation */}
-          <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
-            <div className="flex items-center gap-3">
-              <div className="relative p-2.5 bg-emerald-50 border border-emerald-200 rounded-xl text-[#0D5C3A] shrink-0">
-                <ShoppingBag className="w-5 h-5" />
-                <span className="absolute -top-1.5 -right-1.5 bg-[#0D5C3A] text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
+          <div className="flex items-center gap-2.5 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
+            <div className="flex items-center gap-2.5 sm:gap-3">
+              <div className="relative p-2 sm:p-2.5 bg-emerald-50 border border-emerald-200 rounded-xl text-[#0D5C3A] shrink-0">
+                <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="absolute -top-1.5 -right-1.5 bg-[#0D5C3A] text-white text-[9px] sm:text-[10px] font-black w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full flex items-center justify-center shadow-xs">
                   {totalItemsCount}
                 </span>
               </div>
 
               <div>
-                <div className="flex items-baseline gap-2 flex-wrap">
-                  <span className="text-[11px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider">
+                <div className="flex items-baseline gap-1.5 sm:gap-2 flex-wrap">
+                  <span className="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider">
                     Total ({cartItems.length} {cartItems.length === 1 ? 'variety' : 'varieties'}):
                   </span>
-                  <span className="text-xl sm:text-2xl font-black text-[#0D5C3A] font-sans">
+                  <span className="text-lg sm:text-2xl font-black text-[#0D5C3A] font-sans">
                     ₹{subtotal.toLocaleString('en-IN')}
                   </span>
                   {totalSavings > 0 && (
@@ -53,7 +53,7 @@ const FloatingOrderBar = () => {
                   )}
                 </div>
 
-                <div className="text-[11px] mt-0.5">
+                <div className="text-[10px] sm:text-[11px] mt-0.5">
                   {subtotal >= minOrderAmount ? (
                     <span className="text-emerald-700 font-bold flex items-center gap-1">
                       <span>✓</span> Minimum order ₹{minOrderAmount.toLocaleString('en-IN')} qualified!
@@ -70,7 +70,7 @@ const FloatingOrderBar = () => {
             {/* Mobile Clear Button */}
             <button
               onClick={clearCart}
-              className="sm:hidden text-gray-400 hover:text-red-600 p-2 text-xs font-bold"
+              className="sm:hidden text-gray-400 hover:text-red-600 p-1.5 text-xs font-bold"
               title="Clear Cart"
             >
               <Trash2 className="w-4 h-4" />
@@ -91,17 +91,17 @@ const FloatingOrderBar = () => {
               href={`https://wa.me/919994100905?text=${getWhatsAppOrderMessage()}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-emerald-600 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-colors whitespace-nowrap shadow-xs"
+              className="inline-flex items-center justify-center gap-1.5 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-emerald-600 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] sm:text-xs transition-colors whitespace-nowrap shadow-xs shrink-0"
             >
               <span>WhatsApp Estimate</span>
             </a>
 
             <Link
               to="/cart"
-              className="flex-1 sm:flex-initial bg-[#0D5C3A] hover:bg-[#073822] text-white px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 whitespace-nowrap"
+              className="flex-1 sm:flex-initial bg-[#0D5C3A] hover:bg-[#073822] text-white px-4 sm:px-7 py-2 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 shadow-lg transition-all active:scale-95 whitespace-nowrap"
             >
               <span>View Cart &amp; Order</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </Link>
           </div>
         </div>

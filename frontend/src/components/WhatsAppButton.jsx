@@ -16,10 +16,10 @@ const WhatsAppButton = () => {
     : `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 
   return (
-    <div className={`fixed ${totalItemsCount > 0 ? 'bottom-24 sm:bottom-22' : 'bottom-6'} right-4 sm:right-6 z-40 flex flex-col items-end transition-all duration-300`}>
+    <div className={`fixed ${totalItemsCount > 0 ? 'bottom-[130px] sm:bottom-22' : 'bottom-6'} right-4 sm:right-6 z-40 flex flex-col items-end transition-all duration-300`}>
       {/* Interactive Tooltip Card */}
       {showTooltip && (
-        <div className="mb-3 p-3.5 rounded-2xl bg-[#062D1B] border border-emerald-500/60 shadow-2xl text-xs max-w-xs text-white backdrop-blur-md relative animate-in fade-in slide-in-from-bottom-2">
+        <div className="mb-3 p-3.5 rounded-2xl bg-[#062D1B] border border-emerald-500/60 shadow-2xl text-xs max-w-[calc(100vw-32px)] sm:max-w-xs text-white backdrop-blur-md relative animate-in fade-in slide-in-from-bottom-2">
           <button
             onClick={() => setShowTooltip(false)}
             className="absolute top-2 right-2 text-white/70 hover:text-white transition-colors"

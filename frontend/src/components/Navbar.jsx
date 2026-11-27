@@ -240,18 +240,18 @@ const Navbar = ({ onOpenSearch }) => {
       >
         <div className="w-full max-w-[1760px] mx-auto px-3 sm:px-6 lg:px-10 flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Logo & Title on Left (Square compact logo) */}
-          <Link to="/" className="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group py-0.5">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3.5 shrink-0 group py-0.5 min-w-0">
             <img
               src="/assets/natchiyar_square_logo.png"
               alt="SRI NATCHIYAR CRACKERS Emblem"
-              className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 aspect-square object-contain transition-transform duration-200 group-hover:scale-105 shrink-0"
+              className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 aspect-square object-contain transition-transform duration-200 group-hover:scale-105 shrink-0"
             />
 
-            <div className="flex flex-col leading-none justify-center">
-              <span className="font-serif font-black text-lg sm:text-2xl lg:text-3xl tracking-tight sm:tracking-wide text-[#0D5C3A] uppercase">
+            <div className="flex flex-col leading-none justify-center min-w-0">
+              <span className="font-serif font-black text-base sm:text-2xl lg:text-3xl tracking-tight sm:tracking-wide text-[#0D5C3A] uppercase truncate">
                 SRI NATCHIYAR
               </span>
-              <span className="text-[8px] sm:text-[10px] font-extrabold tracking-[0.16em] sm:tracking-[0.2em] text-[#CA8A04] uppercase mt-0.5">
+              <span className="text-[7.5px] sm:text-[10px] font-extrabold tracking-[0.12em] sm:tracking-[0.2em] text-[#CA8A04] uppercase mt-0.5 whitespace-nowrap">
                 CRACKERS • சிவகாசி நேரடி விற்பனை
               </span>
             </div>

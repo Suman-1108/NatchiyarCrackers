@@ -197,7 +197,8 @@ const Products = () => {
       {/* Main Table Container (Image-Free List Format with Steppers & Row Total) */}
       <div className="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16">
         <div className="bg-white rounded-2xl border border-emerald-100 shadow-sm overflow-hidden">
-          <div className="overflow-x-auto no-scrollbar">
+          {/* Desktop Table View (hidden on mobile) */}
+          <div className="hidden md:block overflow-x-auto no-scrollbar">
             <table className="w-full text-left border-collapse">
               {/* Table Header Row */}
               <thead>
@@ -399,6 +400,138 @@ const Products = () => {
                 )}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile Product Card List View (block md:hidden) */}
+          <div className="block md:hidden divide-y divide-emerald-100/60">
+            {displayedProducts.length === 0 ? (
+              <div className="py-16 text-center text-gray-500 px-4">
+                <Sparkles className="w-10 h-10 text-yellow-500 mx-auto mb-3 opacity-50" />
+                <p className="font-bold text-gray-900 text-base">No fireworks matched your search</p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Try searching for a different term or select "All Fireworks"
+                </p>
+                <button
+                  onClick={() => {
+                    setSelectedCategory('all');
+                    setSearchQuery('');
+                    setSearchParams({});
+                    setCurrentPage(1);
+                  }}
+                  className="mt-4 px-4 py-2 rounded-xl text-xs font-bold bg-[#0D5C3A] text-white hover:bg-[#073822] transition-colors"
+                >
+                  Reset Filters
+                </button>
+              </div>
+            ) : (
+              displayedProducts.map((product) => {
+                const discountPercent = product.mrp > product.price
+                  ? Math.round(((product.mrp - product.price) / product.mrp) * 100)
+                  : 0;
+                const currentQty = getProductQuantity(product.id);
+                const itemTotal = currentQty * product.price;
+
+                return (
+                  <div
+                    key={product.id}
+                    className={`p-3.5 sm:p-4 transition-colors ${
+                      currentQty > 0 ? 'bg-[#FAFDFB]' : 'bg-white'
+                    }`}
+                  >
+                    {/* Top: Serial No, Category, Pack Size */}
+                    <div className="flex items-center justify-between gap-2 mb-1.5">
+                      <div className="flex items-center gap-2">
+                        <span className="w-6 h-6 rounded-md bg-emerald-50 border border-emerald-200 text-[#0D5C3A] font-mono font-bold text-[11px] flex items-center justify-center shrink-0">
+                          {product.no}
+                        </span>
+                        <span className="text-[#0D5C3A] font-extrabold text-[10px] uppercase tracking-wider">
+                          {product.categoryName?.toUpperCase() || 'FIREWORKS'}
+                        </span>
+                      </div>
+                      <span className="text-gray-600 font-mono text-[11px] font-medium bg-emerald-50/50 px-2 py-0.5 rounded border border-emerald-100">
+                        {product.packSize || '1 Unit'}
+                      </span>
+                    </div>
+
+                    {/* Middle: Product Name & Badges */}
+                    <div className="mb-2.5">
+                      <h3 className="font-serif font-bold text-gray-900 text-sm leading-snug">
+                        {product.name}
+                      </h3>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="bg-[#E8F5E9] text-[#2E7D32] border border-[#C8E6C9] text-[9px] font-extrabold px-1.5 py-0.2 rounded-full uppercase tracking-wider">
+                          IN STOCK
+                        </span>
+                        <span className="text-[#CA8A04] text-[10px] font-semibold flex items-center gap-0.5">
+                          <span>★</span>
+                          <span>Festive Choice</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Pricing and Stepper Row */}
+                    <div className="flex items-center justify-between gap-3 pt-2 border-t border-gray-100">
+                      {/* Price details */}
+                      <div>
+                        <div className="flex items-baseline gap-1.5">
+                          <span className="font-black text-gray-950 font-sans text-base">
+                            ₹{product.price}
+                          </span>
+                          <span className="text-xs text-gray-400 line-through font-mono">
+                            ₹{product.mrp}
+                          </span>
+                        </div>
+                        {discountPercent > 0 && (
+                          <span className="text-[10px] font-bold text-[#0D5C3A] block">
+                            {discountPercent}% OFF
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Quantity Stepper & Item Total */}
+                      <div className="flex items-center gap-2.5 sm:gap-3">
+                        <div className="inline-flex items-center border border-emerald-200 rounded-lg bg-white overflow-hidden shadow-2xs">
+                          <button
+                            type="button"
+                            onClick={() => decrementItem(product)}
+                            disabled={currentQty <= 0}
+                            className="w-8 h-8 flex items-center justify-center text-gray-700 hover:text-[#0D5C3A] hover:bg-emerald-50 disabled:opacity-25 transition-colors select-none font-bold"
+                            aria-label={`Decrease quantity of ${product.name}`}
+                          >
+                            <Minus className="w-3.5 h-3.5 stroke-[2.5]" />
+                          </button>
+                          <input
+                            type="number"
+                            min="0"
+                            max="999"
+                            value={currentQty === 0 ? '' : currentQty}
+                            placeholder="0"
+                            onChange={(e) => handleInputChange(product, e.target.value)}
+                            className="w-10 h-8 text-center font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none text-xs font-sans [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none border-x border-emerald-100 bg-transparent"
+                            aria-label={`Quantity of ${product.name}`}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => incrementItem(product)}
+                            className="w-8 h-8 flex items-center justify-center text-gray-700 hover:text-[#0D5C3A] hover:bg-emerald-50 transition-colors select-none font-bold"
+                            aria-label={`Increase quantity of ${product.name}`}
+                          >
+                            <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+                          </button>
+                        </div>
+
+                        <div className="text-right min-w-[56px]">
+                          <span className="text-[9px] text-gray-400 block font-medium uppercase leading-tight">Total</span>
+                          <span className={`font-black font-sans text-xs ${currentQty > 0 ? 'text-[#0D5C3A]' : 'text-gray-300'}`}>
+                            ₹{itemTotal.toLocaleString('en-IN')}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })
+            )}
           </div>
 
           {/* Table Footer with Summary & Pagination Controls */}
