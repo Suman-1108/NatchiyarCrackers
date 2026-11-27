@@ -172,8 +172,8 @@ const Hero = () => {
       if (!isRunning) return;
 
       const diff = targetFrameRef.current - currentFrameRef.current;
-      if (Math.abs(diff) > 0.04) {
-        currentFrameRef.current += diff * 0.2;
+      if (Math.abs(diff) > 0.02) {
+        currentFrameRef.current += diff * 0.12;
         renderFrame(currentFrameRef.current);
       }
 
@@ -225,7 +225,7 @@ const Hero = () => {
          ========================================================================= */}
       <section
         ref={containerRef}
-        className="relative w-full h-[200vh] sm:h-[260vh] bg-[#062D1B]"
+        className="relative w-full h-[400vh] sm:h-[500vh] bg-[#062D1B]"
       >
         {/* Sticky Viewport:
             - Mobile: accounts for fixed header (top-[68px]), viewport height h-[calc(100dvh-68px)]
