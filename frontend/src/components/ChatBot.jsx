@@ -210,11 +210,11 @@ export const ChatBot = () => {
     <div
       className={`fixed ${
         totalItemsCount > 0 ? 'bottom-[130px] sm:bottom-22' : 'bottom-6'
-      } right-4 sm:right-6 z-40 flex flex-col items-end font-sans transition-all duration-300`}
+      } right-4 sm:right-6 z-[60] flex flex-col items-end font-sans transition-all duration-300`}
     >
       {/* Interactive Chat Window */}
       {isOpen && (
-        <div className="mb-3 w-[calc(100vw-32px)] sm:w-[380px] h-[520px] max-h-[75vh] sm:max-h-[80vh] rounded-3xl bg-white border border-[#0D5C3A]/20 shadow-[0_15px_60px_rgba(0,0,0,0.25)] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
+        <div className="mb-3 w-[calc(100vw-32px)] sm:w-[380px] h-[460px] sm:h-[520px] max-h-[calc(100dvh-160px)] sm:max-h-[80vh] rounded-3xl bg-white border border-[#0D5C3A]/20 shadow-[0_15px_60px_rgba(0,0,0,0.25)] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
           {/* Header */}
           <div className="bg-gradient-to-r from-[#062D1B] via-[#0D5C3A] to-[#062D1B] text-white p-3.5 sm:p-4 flex items-center justify-between shrink-0 shadow-sm border-b border-emerald-900/60">
             <div className="flex items-center gap-2.5">

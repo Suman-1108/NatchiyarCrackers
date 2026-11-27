@@ -6,6 +6,7 @@ import { AdminAuthProvider } from './context/AdminAuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
+import WhatsAppButton from './components/WhatsAppButton';
 import FloatingOrderBar from './components/FloatingOrderBar';
 import SearchModal from './components/SearchModal';
 import SplashScreen from './components/SplashScreen';
